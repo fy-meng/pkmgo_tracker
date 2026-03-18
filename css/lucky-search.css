@@ -1,0 +1,233 @@
+/* ── Lucky Search button (sidebar) ───────────────────────────────── */
+.sidebar-lucky-btn {
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Press Start 2P", monospace;
+  font-size: 7px;
+  color: var(--bg);
+  background: var(--lucky);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 14px rgba(255, 159, 67, 0.3);
+  text-align: center;
+}
+
+.sidebar-lucky-btn:hover {
+  background: #ffb347;
+  box-shadow: 0 6px 18px rgba(255, 159, 67, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ── Lucky Search modal ──────────────────────────────────────────── */
+.lucky-search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.lucky-search-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lucky-search-modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+  width: 92%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  animation: modal-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ── User checklist ──────────────────────────────────────────────── */
+.lucky-user-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lucky-user-check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text);
+}
+
+.lucky-user-check-row:hover {
+  background: rgba(255, 159, 67, 0.06);
+  border-color: rgba(255, 159, 67, 0.3);
+}
+
+.lucky-user-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--lucky);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ── Results ─────────────────────────────────────────────────────── */
+.lucky-results-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.lucky-result-block {
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.lucky-result-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border);
+}
+
+.lucky-result-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.lucky-result-sublabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.lucky-copy-btn {
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lucky-copy-btn:hover {
+  border-color: var(--lucky);
+  color: var(--lucky);
+  background: rgba(255, 159, 67, 0.1);
+}
+
+.lucky-copy-btn.copied {
+  border-color: var(--collected);
+  color: var(--collected);
+  background: rgba(81, 207, 102, 0.1);
+}
+
+.lucky-result-text {
+  padding: 12px 14px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: var(--text);
+  word-break: break-all;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.lucky-result-text.empty {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.lucky-back-btn {
+  font-size: 16px !important;
+}
+
+/* ── Lucky search exclude tags ───────────────────────────────────── */
+.lucky-exclude-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.lucky-exclude-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.lucky-exclude-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.lucky-exclude-row input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--lucky);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.lucky-exclude-tag {
+  margin-left: auto;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 7px;
+}

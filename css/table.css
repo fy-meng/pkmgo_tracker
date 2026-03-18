@@ -1,0 +1,537 @@
+/* ── Table container ─────────────────────────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 36px auto 0;
+  padding: 0 24px 0 80px;
+  max-width: 1100px;
+}
+
+.table-wrapper {
+  background: var(--card);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: linear-gradient(90deg, #1a1a38, #1f1f42);
+}
+
+thead th {
+  padding: 14px 18px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+}
+
+thead th:first-child {
+  text-align: left;
+  padding-left: 24px;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(42, 42, 80, 0.6);
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+tbody tr:hover {
+  background: var(--row-hover);
+}
+
+tbody tr.collected {
+  background: rgba(81, 207, 102, 0.04);
+}
+tbody tr.collected:hover {
+  background: rgba(81, 207, 102, 0.08);
+}
+
+td {
+  padding: 14px 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ── Pokémon name cell ───────────────────────────────────────────── */
+td.name-cell {
+  text-align: left;
+  padding-left: 24px;
+  min-width: 200px;
+}
+
+.pokemon-entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dex-num {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text-dim);
+  min-width: 32px;
+}
+
+.sprite-wrap {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.sprite-wrap img {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+tbody tr:hover .sprite-wrap img {
+  transform: translateY(-3px) scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+}
+
+.pokemon-name {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.pokemon-type {
+  display: flex;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+/* ── Type badges ─────────────────────────────────────────────────── */
+.type-badge {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  opacity: 0.85;
+}
+
+.type-fire {
+  background: rgba(255, 100, 30, 0.25);
+  color: #ff7043;
+  border: 1px solid rgba(255, 100, 30, 0.3);
+}
+.type-water {
+  background: rgba(40, 160, 240, 0.25);
+  color: #4dabf7;
+  border: 1px solid rgba(40, 160, 240, 0.3);
+}
+.type-grass {
+  background: rgba(80, 200, 80, 0.25);
+  color: #69db7c;
+  border: 1px solid rgba(80, 200, 80, 0.3);
+}
+.type-poison {
+  background: rgba(160, 60, 200, 0.25);
+  color: #cc5de8;
+  border: 1px solid rgba(160, 60, 200, 0.3);
+}
+.type-normal {
+  background: rgba(140, 140, 140, 0.25);
+  color: #adb5bd;
+  border: 1px solid rgba(140, 140, 140, 0.3);
+}
+.type-flying {
+  background: rgba(130, 180, 255, 0.25);
+  color: #91a7ff;
+  border: 1px solid rgba(130, 180, 255, 0.3);
+}
+.type-psychic {
+  background: rgba(255, 60, 130, 0.25);
+  color: #f783ac;
+  border: 1px solid rgba(255, 60, 130, 0.3);
+}
+.type-dragon {
+  background: rgba(80, 60, 220, 0.25);
+  color: #748ffc;
+  border: 1px solid rgba(80, 60, 220, 0.3);
+}
+.type-electric {
+  background: rgba(255, 220, 0, 0.2);
+  color: #ffd43b;
+  border: 1px solid rgba(255, 220, 0, 0.3);
+}
+.type-ice {
+  background: rgba(100, 220, 255, 0.2);
+  color: #74c0fc;
+  border: 1px solid rgba(100, 220, 255, 0.3);
+}
+.type-ghost {
+  background: rgba(100, 60, 160, 0.25);
+  color: #9775fa;
+  border: 1px solid rgba(100, 60, 160, 0.3);
+}
+.type-ground {
+  background: rgba(200, 160, 80, 0.25);
+  color: #ffa94d;
+  border: 1px solid rgba(200, 160, 80, 0.3);
+}
+.type-fairy {
+  background: rgba(255, 130, 180, 0.25);
+  color: #f783ac;
+  border: 1px solid rgba(255, 130, 180, 0.3);
+}
+.type-rock {
+  background: rgba(180, 140, 60, 0.25);
+  color: #c9a227;
+  border: 1px solid rgba(180, 140, 60, 0.3);
+}
+.type-bug {
+  background: rgba(140, 190, 40, 0.25);
+  color: #a9e34b;
+  border: 1px solid rgba(140, 190, 40, 0.3);
+}
+.type-fighting {
+  background: rgba(200, 60, 40, 0.25);
+  color: #ff6b6b;
+  border: 1px solid rgba(200, 60, 40, 0.3);
+}
+.type-steel {
+  background: rgba(160, 180, 200, 0.2);
+  color: #b8c8d8;
+  border: 1px solid rgba(160, 180, 200, 0.3);
+}
+.type-dark {
+  background: rgba(60, 40, 30, 0.4);
+  color: #a07850;
+  border: 1px solid rgba(100, 70, 50, 0.4);
+}
+.type-shadow {
+  background: rgba(80, 0, 120, 0.3);
+  color: #c084fc;
+  border: 1px solid rgba(120, 0, 180, 0.3);
+}
+
+/* ── Gender buttons ──────────────────────────────────────────────── */
+.gender-group {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.gender-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.gender-btn[data-gender="male"].active {
+  background: rgba(77, 171, 247, 0.2);
+  border-color: var(--male);
+  box-shadow: 0 0 10px rgba(77, 171, 247, 0.4);
+}
+.gender-btn[data-gender="female"].active {
+  background: rgba(247, 131, 172, 0.2);
+  border-color: var(--female);
+  box-shadow: 0 0 10px rgba(247, 131, 172, 0.4);
+}
+.gender-btn[data-gender="none"].active {
+  background: rgba(134, 142, 150, 0.2);
+  border-color: var(--none);
+  box-shadow: 0 0 8px rgba(134, 142, 150, 0.3);
+}
+
+/* ── Lucky / Shiny toggles ───────────────────────────────────────── */
+.toggle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  filter: grayscale(1) opacity(0.35);
+}
+
+.toggle-btn:hover {
+  filter: grayscale(0.3) opacity(0.6);
+  transform: scale(1.08);
+}
+.toggle-btn.active {
+  filter: grayscale(0) opacity(1);
+}
+
+.toggle-btn.lucky.active {
+  background: rgba(255, 159, 67, 0.15);
+  border-color: var(--lucky);
+  box-shadow: 0 0 14px rgba(255, 159, 67, 0.4);
+  animation: pulse-lucky 2s ease infinite;
+}
+
+@keyframes pulse-lucky {
+  0%,
+  100% {
+    box-shadow: 0 0 14px rgba(255, 159, 67, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(255, 159, 67, 0.65);
+  }
+}
+
+.toggle-btn.shiny.active {
+  background: rgba(249, 215, 47, 0.15);
+  border-color: var(--shiny);
+  box-shadow: 0 0 14px rgba(249, 215, 47, 0.45);
+  animation: pulse-shiny 1.8s ease infinite;
+}
+
+@keyframes pulse-shiny {
+  0%,
+  100% {
+    box-shadow: 0 0 14px rgba(249, 215, 47, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(249, 215, 47, 0.7);
+  }
+}
+
+/* ── Collect button ──────────────────────────────────────────────── */
+.collect-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.collect-btn:hover {
+  border-color: var(--collected);
+  background: rgba(81, 207, 102, 0.1);
+}
+.collect-btn.active {
+  border-color: var(--collected);
+  background: rgba(81, 207, 102, 0.2);
+  box-shadow: 0 0 12px rgba(81, 207, 102, 0.35);
+}
+.collect-btn .check-icon {
+  display: none;
+}
+.collect-btn.active .check-icon {
+  display: block;
+}
+.collect-btn .empty-icon {
+  display: block;
+  color: var(--text-dim);
+}
+.collect-btn.active .empty-icon {
+  display: none;
+}
+
+/* ── Row dimming when uncollected ────────────────────────────────── */
+tbody tr:not(.collected) .pokemon-name,
+tbody tr:not(.collected) .dex-num {
+  opacity: 0.6;
+}
+tbody tr:not(.collected) .sprite-wrap img {
+  filter: grayscale(0.7) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+tbody tr.collected .sprite-wrap img {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* ── Expand button ───────────────────────────────────────────────── */
+.expand-btn {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dim);
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  transform: rotate(-90deg);
+}
+
+.expand-btn:hover {
+  background: rgba(255, 203, 5, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.expand-btn.open {
+  transform: rotate(0deg);
+  background: rgba(255, 203, 5, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Form sub-rows ───────────────────────────────────────────────── */
+tr.form-row {
+  border-bottom: 1px solid rgba(42, 42, 80, 0.4);
+  background: rgba(255, 255, 255, 0.015);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+tr.form-row:hover {
+  background: rgba(255, 203, 5, 0.04);
+}
+tr.form-row.collected {
+  background: rgba(81, 207, 102, 0.04);
+}
+tr.form-row.collected:hover {
+  background: rgba(81, 207, 102, 0.08);
+}
+tr.form-row td.name-cell {
+  border-left: 3px solid rgba(255, 203, 5, 0.25);
+}
+
+/* ── Row action buttons ──────────────────────────────────────────── */
+.row-check-all-btn,
+.row-remove-all-btn {
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.row-check-all-btn:hover {
+  background: rgba(255, 203, 5, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.row-check-all-btn.all-checked {
+  background: rgba(81, 207, 102, 0.12);
+  border-color: var(--collected);
+  color: var(--collected);
+}
+.row-remove-all-btn:hover {
+  background: rgba(224, 49, 49, 0.12);
+  border-color: #e03131;
+  color: #ff6b6b;
+}
+
+/* ── Legend ──────────────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 28px auto 0;
+  flex-wrap: wrap;
+  padding: 0 24px 0 80px;
+  max-width: 1100px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ── Region separators ───────────────────────────────────────────── */
+tr.region-separator td {
+  padding: 0;
+  border-bottom: none;
+}
+tr.region-separator:hover {
+  background: transparent;
+  cursor: default;
+}
+
+.region-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 24px 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 100%
+  );
+  border-top: 1px solid var(--border);
+  border-left: 4px solid var(--region-color, #ffcb05);
+}
+
+.region-banner-name {
+  font-family: "Press Start 2P", monospace;
+  font-size: 9px;
+  color: var(--region-color, #ffcb05);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.region-banner-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--region-color, #ffcb05), transparent);
+  opacity: 0.25;
+}
+
+.region-banner-count {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dim);
+}

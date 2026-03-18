@@ -1,0 +1,22 @@
+[
+  {
+    "formId": "tatsugiri-droopy-mega",
+    "name": "Mega Droopy Tatsugiri",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "spriteId": 10323,
+    "baseId": 978
+  },
+  {
+    "formId": "tatsugiri-stretchy-mega",
+    "name": "Mega Stretchy Tatsugiri",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "spriteId": 10324,
+    "baseId": 978
+  }
+]

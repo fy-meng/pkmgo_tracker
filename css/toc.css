@@ -1,0 +1,67 @@
+/* ── TOC sidebar ─────────────────────────────────────────────────── */
+.toc-sidebar {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 20px;
+  transition: background 0.15s ease;
+}
+
+.toc-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.toc-label {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text-dim);
+  opacity: 0.5;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+}
+
+.toc-item:hover .toc-label {
+  opacity: 0.8;
+}
+.toc-item.active .toc-label {
+  opacity: 1;
+  color: var(--region-color, #ffcb05);
+}
+
+.toc-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--region-color, #ffcb05);
+  opacity: 0.3;
+  flex-shrink: 0;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.toc-item:hover .toc-dot {
+  opacity: 0.6;
+}
+.toc-item.active .toc-dot {
+  opacity: 1;
+  transform: scale(1.35);
+  box-shadow: 0 0 8px var(--region-color, #ffcb05);
+}

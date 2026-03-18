@@ -1,0 +1,193 @@
+[
+  {
+    "formId": "butterfree-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "spriteId": 10198,
+    "baseId": 12
+  },
+  {
+    "formId": "machamp-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "fighting"
+    ],
+    "spriteId": 10201,
+    "baseId": 68
+  },
+  {
+    "formId": "kingler-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "water"
+    ],
+    "spriteId": 10203,
+    "baseId": 99
+  },
+  {
+    "formId": "lapras-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "spriteId": 10204,
+    "baseId": 131
+  },
+  {
+    "formId": "eevee-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "normal"
+    ],
+    "spriteId": 10205,
+    "baseId": 133
+  },
+  {
+    "formId": "snorlax-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "normal"
+    ],
+    "spriteId": 10206,
+    "baseId": 143
+  },
+  {
+    "formId": "garbodor-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "poison"
+    ],
+    "spriteId": 10207,
+    "baseId": 569
+  },
+  {
+    "formId": "melmetal-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "steel"
+    ],
+    "spriteId": 10208,
+    "baseId": 809
+  },
+  {
+    "formId": "rillaboom-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "grass"
+    ],
+    "spriteId": 10209,
+    "baseId": 812
+  },
+  {
+    "formId": "cinderace-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "fire"
+    ],
+    "spriteId": 10210,
+    "baseId": 815
+  },
+  {
+    "formId": "inteleon-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "water"
+    ],
+    "spriteId": 10211,
+    "baseId": 818
+  },
+  {
+    "formId": "corviknight-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "flying",
+      "steel"
+    ],
+    "spriteId": 10212,
+    "baseId": 823
+  },
+  {
+    "formId": "orbeetle-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "bug",
+      "psychic"
+    ],
+    "spriteId": 10213,
+    "baseId": 826
+  },
+  {
+    "formId": "coalossal-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "rock",
+      "fire"
+    ],
+    "spriteId": 10215,
+    "baseId": 839
+  },
+  {
+    "formId": "flapple-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "spriteId": 10216,
+    "baseId": 841
+  },
+  {
+    "formId": "appletun-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "spriteId": 10217,
+    "baseId": 842
+  },
+  {
+    "formId": "centiskorch-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "fire",
+      "bug"
+    ],
+    "spriteId": 10220,
+    "baseId": 851
+  },
+  {
+    "formId": "hatterene-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "spriteId": 10221,
+    "baseId": 858
+  },
+  {
+    "formId": "grimmsnarl-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "spriteId": 10222,
+    "baseId": 861
+  },
+  {
+    "formId": "duraludon-gmax",
+    "name": "Gigantamax",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "spriteId": 10225,
+    "baseId": 884
+  }
+]

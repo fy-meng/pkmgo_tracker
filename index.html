@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Collection Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" href="css/toc.css" />
+    <link rel="stylesheet" href="css/modals.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/lucky-search.css" />
+  </head>
+  <body>
+    <!-- Left sidebar -->
+    <div class="left-sidebar" id="left-sidebar">
+      <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle sidebar">
+        &#9776;
+      </button>
+      <div class="sidebar-content">
+        <div class="sidebar-trainer">
+          <div class="sidebar-trainer-icon">🎮</div>
+          <div class="sidebar-trainer-info">
+            <span class="sidebar-trainer-label">Trainer ID</span>
+            <span class="sidebar-trainer-name" id="sidebar-trainer-name"
+              >—</span
+            >
+          </div>
+          <button
+            class="sidebar-settings-btn"
+            id="sidebar-settings-btn"
+            title="User settings"
+          >
+            ⚙
+          </button>
+        </div>
+        <button class="sidebar-lucky-btn" id="lucky-search-open-btn">
+          🍀 Lucky Search
+        </button>
+      </div>
+    </div>
+
+    <!-- User settings modal -->
+    <div class="settings-overlay" id="settings-overlay">
+      <div class="settings-modal">
+        <div class="settings-modal-header">
+          <span class="userid-modal-icon">⚙️</span>
+          <h2 class="userid-modal-title">Trainer Settings</h2>
+          <button
+            class="settings-close-btn"
+            id="settings-close-btn"
+            title="Close"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- User list -->
+        <div class="settings-section-label">Saved Trainers</div>
+        <div class="settings-user-list" id="settings-user-list"></div>
+
+        <!-- Add / rename form -->
+        <div class="settings-section-label" id="settings-form-label">
+          Add New Trainer
+        </div>
+        <div class="settings-input-row">
+          <input
+            class="userid-input"
+            id="settings-userid-input"
+            type="text"
+            placeholder="Trainer ID…"
+            maxlength="32"
+            autocomplete="off"
+            spellcheck="false"
+            style="text-align: left"
+          />
+          <button
+            class="userid-confirm-btn settings-inline-btn"
+            id="settings-confirm-btn"
+          >
+            Save
+          </button>
+        </div>
+        <p class="userid-error" id="settings-userid-error"></p>
+
+        <!-- Import -->
+        <div class="settings-section-label" style="margin-top: 20px">Data</div>
+        <div class="settings-data-row">
+          <label class="settings-data-btn import" id="settings-import-label">
+            ⬆ Import Trainer Data
+            <input
+              type="file"
+              id="settings-import-input"
+              accept=".json"
+              style="display: none"
+            />
+          </label>
+        </div>
+        <p class="settings-data-note">
+          Import a previously exported trainer file. Use the ⬇ button next to
+          each trainer to export their data.
+        </p>
+        <p class="userid-error" id="settings-import-error"></p>
+      </div>
+    </div>
+
+    <header>
+      <svg
+        class="pokeball-icon"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="48"
+          fill="none"
+          stroke="#ffcb05"
+          stroke-width="3"
+        />
+        <path d="M2 50 Q2 2 50 2 Q98 2 98 50 Z" fill="#e03131" opacity="0.85" />
+        <path d="M2 50 Q2 98 50 98 Q98 98 98 50 Z" fill="#1a1a2e" />
+        <rect x="2" y="46" width="96" height="8" fill="#ffcb05" />
+        <circle
+          cx="50"
+          cy="50"
+          r="14"
+          fill="#1a1a2e"
+          stroke="#ffcb05"
+          stroke-width="3"
+        />
+        <circle cx="50" cy="50" r="7" fill="#ffcb05" />
+      </svg>
+      <div class="header-text">
+        <h1>Pokédex Tracker</h1>
+        <p>Track your collection — caught, shiny &amp; lucky</p>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-chip">
+          <span class="num" id="stat-collected">0</span>
+          <span class="lbl">Caught</span>
+        </div>
+        <div class="stat-chip">
+          <span class="num" id="stat-shiny">0</span>
+          <span class="lbl">✨ Shiny</span>
+        </div>
+        <div class="stat-chip">
+          <span class="num" id="stat-lucky">0</span>
+          <span class="lbl">🍀 Lucky</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Collection Progress</span>
+        <span id="progress-text">0 / 0</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="table-wrapper">
+        <table id="pokedex-table">
+          <thead>
+            <tr>
+              <th style="text-align: left; padding-left: 24px">Pokémon</th>
+              <th>Gender</th>
+              <th>🍀 Lucky</th>
+              <th>✨ Shiny</th>
+              <th>Caught</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="pokemon-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #4dabf7"></div>
+        Male (♂)
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #f783ac"></div>
+        Female (♀)
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #868e96"></div>
+        Genderless (—)
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #ff9f43"></div>
+        Lucky
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #ffd43b"></div>
+        Shiny
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #51cf66"></div>
+        Caught
+      </div>
+    </div>
+
+    <div class="toc-sidebar" id="toc-sidebar"></div>
+
+    <!-- User ID prompt modal -->
+    <div class="userid-overlay" id="userid-overlay">
+      <div class="userid-modal">
+        <div class="userid-modal-icon">🎮</div>
+        <h2 class="userid-modal-title">Welcome, Trainer!</h2>
+        <p class="userid-modal-desc">
+          Choose a <strong>Trainer ID</strong> to identify your collection.<br />
+          This is stored locally in your browser and is only used as a label for
+          your data.
+        </p>
+        <input
+          class="userid-input"
+          id="userid-input"
+          type="text"
+          placeholder="e.g. Ash, RedVersion, Trainer42…"
+          maxlength="32"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <p class="userid-error" id="userid-error"></p>
+        <button class="userid-confirm-btn" id="userid-confirm">
+          Start Tracking →
+        </button>
+      </div>
+    </div>
+
+    <!-- Lucky Search modal -->
+    <div class="lucky-search-overlay" id="lucky-search-overlay">
+      <div class="lucky-search-modal">
+        <!-- Step 1: user selection -->
+        <div id="lucky-step-select">
+          <div class="settings-modal-header">
+            <span class="userid-modal-icon">🍀</span>
+            <h2 class="userid-modal-title">Lucky Search</h2>
+            <button
+              class="settings-close-btn"
+              id="lucky-search-close-btn"
+              title="Close"
+            >
+              ✕
+            </button>
+          </div>
+          <div class="settings-section-label">Select Trainers to Compare</div>
+          <div class="lucky-user-checklist" id="lucky-user-checklist"></div>
+          <p class="userid-error" id="lucky-select-error"></p>
+
+          <div class="settings-section-label" style="margin-top: 16px">
+            Exclude Tags
+          </div>
+          <div class="lucky-exclude-list" id="lucky-exclude-list">
+            <label class="lucky-exclude-row">
+              <input
+                type="checkbox"
+                class="lucky-exclude-cb"
+                value="&!shiny"
+                checked
+              />
+              Shiny
+              <span class="lucky-exclude-tag">&amp;!shiny</span>
+            </label>
+            <label class="lucky-exclude-row">
+              <input
+                type="checkbox"
+                class="lucky-exclude-cb"
+                value="&!costume"
+                checked
+              />
+              Costume
+              <span class="lucky-exclude-tag">&amp;!costume</span>
+            </label>
+            <label class="lucky-exclude-row">
+              <input
+                type="checkbox"
+                class="lucky-exclude-cb"
+                value="&!4*"
+                checked
+              />
+              100%
+              <span class="lucky-exclude-tag">&amp;!4*</span>
+            </label>
+            <label class="lucky-exclude-row">
+              <input
+                type="checkbox"
+                class="lucky-exclude-cb"
+                value="&!purified"
+              />
+              Purified
+              <span class="lucky-exclude-tag">&amp;!purified</span>
+            </label>
+            <label class="lucky-exclude-row">
+              <input
+                type="checkbox"
+                class="lucky-exclude-cb"
+                value="&!@special"
+              />
+              Legacy Moves
+              <span class="lucky-exclude-tag">&amp;!@special</span>
+            </label>
+          </div>
+
+          <button
+            class="userid-confirm-btn"
+            id="lucky-generate-btn"
+            style="margin-top: 16px"
+          >
+            Generate →
+          </button>
+        </div>
+
+        <!-- Step 2: results -->
+        <div id="lucky-step-results" style="display: none">
+          <div class="settings-modal-header">
+            <button
+              class="settings-close-btn lucky-back-btn"
+              id="lucky-back-btn"
+              title="Back"
+            >
+              ←
+            </button>
+            <h2 class="userid-modal-title" style="font-size: 9px">
+              Lucky Search Results
+            </h2>
+            <button
+              class="settings-close-btn"
+              id="lucky-results-close-btn"
+              title="Close"
+            >
+              ✕
+            </button>
+          </div>
+          <div id="lucky-results-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/lucky-search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
