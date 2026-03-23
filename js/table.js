@@ -30,7 +30,6 @@ function renderFormRow(form, parentId) {
   const typeHtml = form.types
     .map((t) => `<span class="type-badge type-${t}">${t}</span>`)
     .join("");
-  const parentName = (POKEMON.find((p) => p.id === parentId) || {}).name || "";
 
   const nameTd = document.createElement("td");
   nameTd.className = "name-cell";
@@ -40,7 +39,7 @@ function renderFormRow(form, parentId) {
         <img src="${spriteUrl(form.spriteId)}" alt="${form.name}" loading="lazy" style="width:36px;height:36px;">
       </div>
       <div>
-        <div class="pokemon-name" style="font-size:13px;">${form.name} ${parentName}</div>
+        <div class="pokemon-name" style="font-size:13px;">${form.name}</div>
         <div class="pokemon-type">${typeHtml}</div>
       </div>
     </div>`;
@@ -76,10 +75,11 @@ function renderFormRow(form, parentId) {
 
 // ── Main Pokémon row ──────────────────────────────────────────────
 function renderRow(p) {
-  const s = state[p.id];
+  const key = p.formId || p.id; // flat entries use formId as their state key
+  const s = state[key];
   const hasForms = !!(p.forms && p.forms.length);
   const tr = document.createElement("tr");
-  tr.dataset.id = p.id;
+  tr.dataset.id = key;
   if (s.collected) tr.classList.add("collected");
 
   const typeHtml = p.types
@@ -90,7 +90,7 @@ function renderRow(p) {
   const nameTd = document.createElement("td");
   nameTd.className = "name-cell";
   const expandBtn = hasForms
-    ? `<button class="expand-btn ${s.expanded ? "open" : ""}" data-id="${p.id}" title="Toggle forms">&#9660;</button>`
+    ? `<button class="expand-btn ${s.expanded ? "open" : ""}" data-id="${key}" title="Toggle forms">&#9660;</button>`
     : `<span style="display:inline-block;width:28px;flex-shrink:0;"></span>`;
 
   nameTd.innerHTML = `
@@ -106,9 +106,10 @@ function renderRow(p) {
       </div>
     </div>`;
 
-  // Gender cell
+  // Gender cell — support 'male-female'|'male'|'female'|'none'; default undefined → 'both'
+  const gender = p.gender || "male-female";
   const genderTd = document.createElement("td");
-  if (p.gender === "none") {
+  if (gender === "none") {
     const btn = document.createElement("button");
     btn.className = "gender-btn" + (s.genderless ? " active" : "");
     btn.dataset.gender = "none";
@@ -117,9 +118,9 @@ function renderRow(p) {
     btn.style.cssText = "font-size:14px;font-weight:700;";
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      state[p.id].genderless = !state[p.id].genderless;
-      btn.className = "gender-btn" + (state[p.id].genderless ? " active" : "");
-      if (state[p.id].genderless) autoCollect();
+      state[key].genderless = !state[key].genderless;
+      btn.className = "gender-btn" + (state[key].genderless ? " active" : "");
+      if (state[key].genderless) autoCollect();
       else syncCheckAllBtn();
       updateStats();
     });
@@ -130,13 +131,24 @@ function renderRow(p) {
   } else {
     const group = document.createElement("div");
     group.className = "gender-group";
+    // Always render two slots (♂ then ♀) to keep alignment.
+    // For 'male'-only or 'female'-only, the absent slot is an invisible spacer.
     ["male", "female"].forEach((g) => {
-      const btn = document.createElement("button");
-      btn.className = "gender-btn" + (s[g] ? " active" : "");
-      btn.dataset.gender = g;
-      btn.title = g.charAt(0).toUpperCase() + g.slice(1);
-      btn.textContent = g === "male" ? "♂" : "♀";
-      group.appendChild(btn);
+      const show = gender === "male-female" || gender === g;
+      if (show) {
+        const btn = document.createElement("button");
+        btn.className = "gender-btn" + (s[g] ? " active" : "");
+        btn.dataset.gender = g;
+        btn.title = g.charAt(0).toUpperCase() + g.slice(1);
+        btn.textContent = g === "male" ? "♂" : "♀";
+        group.appendChild(btn);
+      } else {
+        // Invisible spacer keeps the visible button in the correct column
+        const spacer = document.createElement("span");
+        spacer.style.cssText =
+          "display:inline-block;width:34px;height:34px;flex-shrink:0;";
+        group.appendChild(spacer);
+      }
     });
     genderTd.appendChild(group);
   }
@@ -158,8 +170,8 @@ function renderRow(p) {
 
   // Collect cell
   const collectTd = document.createElement("td");
-  const collectBtn = makeCollectBtn(p.id, () => {
-    tr.className = state[p.id].collected ? "collected" : "";
+  const collectBtn = makeCollectBtn(key, () => {
+    tr.className = state[key].collected ? "collected" : "";
     syncCheckAllBtn();
   });
   collectTd.appendChild(collectBtn);
@@ -171,10 +183,10 @@ function renderRow(p) {
   checkAllBtn.title = "Check all boxes for this Pokémon";
 
   function isAllChecked() {
-    const keys = ["male", "female", "genderless", "lucky", "shiny"].filter(
-      (k) => k in state[p.id],
+    const ks = ["male", "female", "genderless", "lucky", "shiny"].filter(
+      (k) => k in state[key],
     );
-    return state[p.id].collected && keys.every((k) => state[p.id][k]);
+    return state[key].collected && ks.every((k) => state[key][k]);
   }
 
   function syncCheckAllBtn() {
@@ -201,25 +213,27 @@ function renderRow(p) {
     e.stopPropagation();
     const newVal = !isAllChecked();
 
-    state[p.id].collected = newVal;
+    state[key].collected = newVal;
     tr.className = newVal ? "collected" : "";
     collectBtn.className = "collect-btn" + (newVal ? " active" : "");
 
-    if (p.gender === "none") {
-      state[p.id].genderless = newVal;
+    if (gender === "none") {
+      state[key].genderless = newVal;
       const gb = genderTd.querySelector(".gender-btn");
       if (gb) gb.className = "gender-btn" + (newVal ? " active" : "");
     } else {
-      ["male", "female"].forEach((g) => {
-        state[p.id][g] = newVal;
-        const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
-        if (gb) gb.className = "gender-btn" + (newVal ? " active" : "");
-      });
+      ["male", "female"]
+        .filter((g) => gender === "male-female" || gender === g)
+        .forEach((g) => {
+          state[key][g] = newVal;
+          const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
+          if (gb) gb.className = "gender-btn" + (newVal ? " active" : "");
+        });
     }
 
-    state[p.id].lucky = newVal;
+    state[key].lucky = newVal;
     luckyBtn.className = "toggle-btn lucky" + (newVal ? " active" : "");
-    state[p.id].shiny = newVal;
+    state[key].shiny = newVal;
     shinyBtn.className = "toggle-btn shiny" + (newVal ? " active" : "");
 
     setFormStates(newVal);
@@ -237,25 +251,27 @@ function renderRow(p) {
   removeAllBtn.addEventListener("click", (e) => {
     e.stopPropagation();
 
-    state[p.id].collected = false;
+    state[key].collected = false;
     tr.className = "";
     collectBtn.className = "collect-btn";
 
-    if (p.gender === "none") {
-      state[p.id].genderless = false;
+    if (gender === "none") {
+      state[key].genderless = false;
       const gb = genderTd.querySelector(".gender-btn");
       if (gb) gb.className = "gender-btn";
     } else {
-      ["male", "female"].forEach((g) => {
-        state[p.id][g] = false;
-        const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
-        if (gb) gb.className = "gender-btn";
-      });
+      ["male", "female"]
+        .filter((g) => gender === "male-female" || gender === g)
+        .forEach((g) => {
+          state[key][g] = false;
+          const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
+          if (gb) gb.className = "gender-btn";
+        });
     }
 
-    state[p.id].lucky = false;
+    state[key].lucky = false;
     luckyBtn.className = "toggle-btn lucky";
-    state[p.id].shiny = false;
+    state[key].shiny = false;
     shinyBtn.className = "toggle-btn shiny";
 
     setFormStates(false);
@@ -274,8 +290,8 @@ function renderRow(p) {
 
   // ── Auto-collect when any box is checked ──────────────────────
   function autoCollect() {
-    if (!state[p.id].collected) {
-      state[p.id].collected = true;
+    if (!state[key].collected) {
+      state[key].collected = true;
       tr.classList.add("collected");
       collectBtn.className = "collect-btn active";
       updateStats();
@@ -287,11 +303,11 @@ function renderRow(p) {
   if (hasForms) {
     nameTd.querySelector(".expand-btn").addEventListener("click", (e) => {
       e.stopPropagation();
-      state[p.id].expanded = !state[p.id].expanded;
+      state[key].expanded = !state[key].expanded;
       toggleFormRows(p);
       nameTd
         .querySelector(".expand-btn")
-        .classList.toggle("open", state[p.id].expanded);
+        .classList.toggle("open", state[key].expanded);
     });
   }
 
@@ -300,9 +316,9 @@ function renderRow(p) {
       e.stopPropagation();
       const g = btn.dataset.gender;
       if (g === "none") return;
-      state[p.id][g] = !state[p.id][g];
-      btn.className = "gender-btn" + (state[p.id][g] ? " active" : "");
-      if (state[p.id][g]) autoCollect();
+      state[key][g] = !state[key][g];
+      btn.className = "gender-btn" + (state[key][g] ? " active" : "");
+      if (state[key][g]) autoCollect();
       else syncCheckAllBtn();
       updateStats();
     });
@@ -310,30 +326,30 @@ function renderRow(p) {
 
   luckyBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    state[p.id].lucky = !state[p.id].lucky;
+    state[key].lucky = !state[key].lucky;
     luckyBtn.className =
-      "toggle-btn lucky" + (state[p.id].lucky ? " active" : "");
-    if (state[p.id].lucky) autoCollect();
+      "toggle-btn lucky" + (state[key].lucky ? " active" : "");
+    if (state[key].lucky) autoCollect();
     else syncCheckAllBtn();
     updateStats();
   });
 
   shinyBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    state[p.id].shiny = !state[p.id].shiny;
+    state[key].shiny = !state[key].shiny;
     shinyBtn.className =
-      "toggle-btn shiny" + (state[p.id].shiny ? " active" : "");
-    if (state[p.id].shiny) autoCollect();
+      "toggle-btn shiny" + (state[key].shiny ? " active" : "");
+    if (state[key].shiny) autoCollect();
     else syncCheckAllBtn();
     updateStats();
   });
 
   if (!hasForms) {
     tr.addEventListener("click", () => {
-      state[p.id].collected = !state[p.id].collected;
-      tr.className = state[p.id].collected ? "collected" : "";
+      state[key].collected = !state[key].collected;
+      tr.className = state[key].collected ? "collected" : "";
       collectBtn.className =
-        "collect-btn" + (state[p.id].collected ? " active" : "");
+        "collect-btn" + (state[key].collected ? " active" : "");
       syncCheckAllBtn();
       updateStats();
     });
@@ -345,9 +361,10 @@ function renderRow(p) {
 // ── Form row toggle ───────────────────────────────────────────────
 function toggleFormRows(p) {
   const tbody = document.getElementById("pokemon-tbody");
-  const parentTr = tbody.querySelector(`tr[data-id="${p.id}"]`);
+  const key = p.formId || p.id;
+  const parentTr = tbody.querySelector(`tr[data-id="${key}"]`);
 
-  if (state[p.id].expanded) {
+  if (state[key].expanded) {
     let ref = parentTr.nextSibling;
     p.forms.forEach((f) => {
       tbody.insertBefore(renderFormRow(f, p.id), ref);
@@ -367,18 +384,19 @@ function updateStats() {
     total = 0;
 
   POKEMON.forEach((p) => {
+    const key = p.formId || p.id;
     if (p.forms) {
       p.forms.forEach((f) => {
         total++;
-        if (state[f.formId].collected) collected++;
+        if (state[f.formId] && state[f.formId].collected) collected++;
       });
-      if (state[p.id].shiny) shiny++;
-      if (state[p.id].lucky) lucky++;
+      if (state[key] && state[key].shiny) shiny++;
+      if (state[key] && state[key].lucky) lucky++;
     } else {
       total++;
-      if (state[p.id].collected) collected++;
-      if (state[p.id].shiny) shiny++;
-      if (state[p.id].lucky) lucky++;
+      if (state[key] && state[key].collected) collected++;
+      if (state[key] && state[key].shiny) shiny++;
+      if (state[key] && state[key].lucky) lucky++;
     }
   });
 
@@ -388,7 +406,7 @@ function updateStats() {
   document.getElementById("progress-text").textContent =
     `${collected} / ${total}`;
   document.getElementById("progress-fill").style.width =
-    `${(collected / total) * 100}%`;
+    total > 0 ? `${(collected / total) * 100}%` : "0%";
 
   saveCookie();
 }

@@ -1,15 +1,17 @@
 // ── Global state ──────────────────────────────────────────────────
-// POKEMON   : array loaded from pokemon-data.json
-// state     : keyed by pokemon id (number) or formId (string)
-// _cookieData: raw saved data for the active user, loaded once on init
+// POKEMON      : active tab's pokemon array
+// TAB_DATA     : all loaded datasets keyed by tab id
+// activeTab    : currently shown tab ('pokemon' | 'mega' | 'gmax')
+// state        : keyed by pokemon id (number) or formId (string)
+// _cookieData  : raw saved data for the active user, loaded once on init
 
 let POKEMON = [];
+const TAB_DATA = {}; // { pokemon: [...], mega: [...], gmax: [...] }
+let activeTab = "pokemon";
 const state = {};
 let _cookieData = {};
 
 // ── Active-user cookie wrappers ───────────────────────────────────
-// These delegate to storage.js, passing the live state object.
-
 function saveCookie() {
   const userId = loadUserId();
   if (userId) saveCookieForUser(userId, state);
@@ -23,9 +25,12 @@ function loadCookie() {
 }
 
 // ── Per-pokemon state initialisation ─────────────────────────────
+// Works for both standard Pokémon (keyed by numeric id) and flat
+// Mega/G-Max entries (keyed by formId string).
 function initState(p) {
-  const base = _cookieData[p.id] || {};
-  state[p.id] = {
+  const key = p.formId || p.id;
+  const base = _cookieData[key] || {};
+  state[key] = {
     collected: !!base.c,
     male: !!base.m,
     female: !!base.f,
