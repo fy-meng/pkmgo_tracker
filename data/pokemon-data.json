@@ -201,8 +201,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "rattata",
+        "name": "Rattata",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 19
+      },
+      {
         "formId": "rattata-alola",
-        "name": "Alolan",
+        "name": "Alolan Rattata",
         "types": [
           "dark",
           "normal"
@@ -222,22 +230,21 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "raticate",
+        "name": "Raticate",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 20
+      },
+      {
         "formId": "raticate-alola",
-        "name": "Alolan",
+        "name": "Alolan Raticate",
         "types": [
           "dark",
           "normal"
         ],
         "spriteId": 10092
-      },
-      {
-        "formId": "raticate-totem-alola",
-        "name": "Totem Alolan Raticate",
-        "types": [
-          "dark",
-          "normal"
-        ],
-        "spriteId": 10093
       }
     ]
   },
@@ -291,33 +298,7 @@
     ],
     "gender": "male-female",
     "spriteId": 25,
-    "region": "Kanto",
-    "forms": [
-      {
-        "formId": "pikachu-rock-star",
-        "name": "Pikachu Rock Star",
-        "types": [
-          "electric"
-        ],
-        "spriteId": 10080
-      },
-      {
-        "formId": "pikachu-pop-star",
-        "name": "Pikachu Pop Star",
-        "types": [
-          "electric"
-        ],
-        "spriteId": 10082
-      },
-      {
-        "formId": "pikachu-libre",
-        "name": "Pikachu Libre",
-        "types": [
-          "electric"
-        ],
-        "spriteId": 10084
-      }
-    ]
+    "region": "Kanto"
   },
   {
     "id": 26,
@@ -330,8 +311,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "raichu",
+        "name": "Raichu",
+        "types": [
+          "electric"
+        ],
+        "spriteId": 26
+      },
+      {
         "formId": "raichu-alola",
-        "name": "Alolan",
+        "name": "Alolan Raichu",
         "types": [
           "electric",
           "psychic"
@@ -351,8 +340,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "sandshrew",
+        "name": "Sandshrew",
+        "types": [
+          "ground"
+        ],
+        "spriteId": 27
+      },
+      {
         "formId": "sandshrew-alola",
-        "name": "Alolan",
+        "name": "Alolan Sandshrew",
         "types": [
           "ice",
           "steel"
@@ -372,8 +369,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "sandslash",
+        "name": "Sandslash",
+        "types": [
+          "ground"
+        ],
+        "spriteId": 28
+      },
+      {
         "formId": "sandslash-alola",
-        "name": "Alolan",
+        "name": "Alolan Sandslash",
         "types": [
           "ice",
           "steel"
@@ -475,8 +480,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "vulpix",
+        "name": "Vulpix",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 37
+      },
+      {
         "formId": "vulpix-alola",
-        "name": "Alolan",
+        "name": "Alolan Vulpix",
         "types": [
           "ice"
         ],
@@ -495,8 +508,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "ninetales",
+        "name": "Ninetales",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 38
+      },
+      {
         "formId": "ninetales-alola",
-        "name": "Alolan",
+        "name": "Alolan Ninetales",
         "types": [
           "ice",
           "fairy"
@@ -637,8 +658,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "diglett",
+        "name": "Diglett",
+        "types": [
+          "ground"
+        ],
+        "spriteId": 50
+      },
+      {
         "formId": "diglett-alola",
-        "name": "Alolan",
+        "name": "Alolan Diglett",
         "types": [
           "ground",
           "steel"
@@ -658,8 +687,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "dugtrio",
+        "name": "Dugtrio",
+        "types": [
+          "ground"
+        ],
+        "spriteId": 51
+      },
+      {
         "formId": "dugtrio-alola",
-        "name": "Alolan",
+        "name": "Alolan Dugtrio",
         "types": [
           "ground",
           "steel"
@@ -679,8 +716,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "meowth",
+        "name": "Meowth",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 52
+      },
+      {
         "formId": "meowth-alola",
-        "name": "Alolan",
+        "name": "Alolan Meowth",
         "types": [
           "dark"
         ],
@@ -688,7 +733,7 @@
       },
       {
         "formId": "meowth-galar",
-        "name": "Galarian",
+        "name": "Galarian Meowth",
         "types": [
           "steel"
         ],
@@ -707,8 +752,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "persian",
+        "name": "Persian",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 53
+      },
+      {
         "formId": "persian-alola",
-        "name": "Alolan",
+        "name": "Alolan Persian",
         "types": [
           "dark"
         ],
@@ -767,8 +820,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "growlithe",
+        "name": "Growlithe",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 58
+      },
+      {
         "formId": "growlithe-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Growlithe",
         "types": [
           "fire",
           "rock"
@@ -788,8 +849,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "arcanine",
+        "name": "Arcanine",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 59
+      },
+      {
         "formId": "arcanine-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Arcanine",
         "types": [
           "fire",
           "rock"
@@ -956,8 +1025,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "geodude",
+        "name": "Geodude",
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "spriteId": 74
+      },
+      {
         "formId": "geodude-alola",
-        "name": "Alolan",
+        "name": "Alolan Geodude",
         "types": [
           "rock",
           "electric"
@@ -978,8 +1056,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "graveler",
+        "name": "Graveler",
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "spriteId": 75
+      },
+      {
         "formId": "graveler-alola",
-        "name": "Alolan",
+        "name": "Alolan Graveler",
         "types": [
           "rock",
           "electric"
@@ -1000,8 +1087,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "golem",
+        "name": "Golem",
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "spriteId": 76
+      },
+      {
         "formId": "golem-alola",
-        "name": "Alolan",
+        "name": "Alolan Golem",
         "types": [
           "rock",
           "electric"
@@ -1021,8 +1117,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "ponyta",
+        "name": "Ponyta",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 77
+      },
+      {
         "formId": "ponyta-galar",
-        "name": "Galarian",
+        "name": "Galarian Ponyta",
         "types": [
           "psychic"
         ],
@@ -1041,8 +1145,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "rapidash",
+        "name": "Rapidash",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 78
+      },
+      {
         "formId": "rapidash-galar",
-        "name": "Galarian",
+        "name": "Galarian Rapidash",
         "types": [
           "psychic",
           "fairy"
@@ -1063,8 +1175,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "slowpoke",
+        "name": "Slowpoke",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "spriteId": 79
+      },
+      {
         "formId": "slowpoke-galar",
-        "name": "Galarian",
+        "name": "Galarian Slowpoke",
         "types": [
           "psychic"
         ],
@@ -1084,8 +1205,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "slowbro",
+        "name": "Slowbro",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "spriteId": 80
+      },
+      {
         "formId": "slowbro-galar",
-        "name": "Galarian",
+        "name": "Galarian Slowbro",
         "types": [
           "poison",
           "psychic"
@@ -1128,8 +1258,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "farfetchd",
+        "name": "farfetchd Farfetch’d",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "spriteId": 83
+      },
+      {
         "formId": "farfetchd-galar",
-        "name": "Galarian",
+        "name": "Galarian Farfetch’d",
         "types": [
           "fighting"
         ],
@@ -1191,8 +1330,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "grimer",
+        "name": "Grimer",
+        "types": [
+          "poison"
+        ],
+        "spriteId": 88
+      },
+      {
         "formId": "grimer-alola",
-        "name": "Alolan",
+        "name": "Alolan Grimer",
         "types": [
           "poison",
           "dark"
@@ -1212,8 +1359,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "muk",
+        "name": "Muk",
+        "types": [
+          "poison"
+        ],
+        "spriteId": 89
+      },
+      {
         "formId": "muk-alola",
-        "name": "Alolan",
+        "name": "Alolan Muk",
         "types": [
           "poison",
           "dark"
@@ -1338,8 +1493,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "voltorb",
+        "name": "Voltorb",
+        "types": [
+          "electric"
+        ],
+        "spriteId": 100
+      },
+      {
         "formId": "voltorb-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Voltorb",
         "types": [
           "electric",
           "grass"
@@ -1359,8 +1522,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "electrode",
+        "name": "Electrode",
+        "types": [
+          "electric"
+        ],
+        "spriteId": 101
+      },
+      {
         "formId": "electrode-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Electrode",
         "types": [
           "electric",
           "grass"
@@ -1392,8 +1563,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "exeggutor",
+        "name": "Exeggutor",
+        "types": [
+          "grass",
+          "psychic"
+        ],
+        "spriteId": 103
+      },
+      {
         "formId": "exeggutor-alola",
-        "name": "Alolan",
+        "name": "Alolan Exeggutor",
         "types": [
           "grass",
           "dragon"
@@ -1423,22 +1603,21 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "marowak",
+        "name": "Marowak",
+        "types": [
+          "ground"
+        ],
+        "spriteId": 105
+      },
+      {
         "formId": "marowak-alola",
-        "name": "Alolan",
+        "name": "Alolan Marowak",
         "types": [
           "fire",
           "ghost"
         ],
         "spriteId": 10115
-      },
-      {
-        "formId": "marowak-totem",
-        "name": "Totem Alolan Marowak",
-        "types": [
-          "fire",
-          "ghost"
-        ],
-        "spriteId": 10149
       }
     ]
   },
@@ -1493,8 +1672,16 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "weezing",
+        "name": "Weezing",
+        "types": [
+          "poison"
+        ],
+        "spriteId": 110
+      },
+      {
         "formId": "weezing-galar",
-        "name": "Galarian",
+        "name": "Galarian Weezing",
         "types": [
           "poison",
           "fairy"
@@ -1628,8 +1815,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "mr-mime",
+        "name": "mr-mime Mr. Mime",
+        "types": [
+          "psychic",
+          "fairy"
+        ],
+        "spriteId": 122
+      },
+      {
         "formId": "mr-mime-galar",
-        "name": "Galarian",
+        "name": "Galarian Mr. Mime",
         "types": [
           "ice",
           "psychic"
@@ -1701,16 +1897,16 @@
     "region": "Kanto",
     "forms": [
       {
-        "formId": "tauros-paldea-combat-breed",
-        "name": "Paldean Form (Combat Breed)",
+        "formId": "tauros",
+        "name": "Tauros",
         "types": [
-          "fighting"
+          "normal"
         ],
-        "spriteId": 10250
+        "spriteId": 128
       },
       {
         "formId": "tauros-paldea-blaze-breed",
-        "name": "Paldean Form (Blaze Breed)",
+        "name": "Paldean Form (Blaze Breed) Tauros",
         "types": [
           "fighting",
           "fire"
@@ -1719,12 +1915,20 @@
       },
       {
         "formId": "tauros-paldea-aqua-breed",
-        "name": "Paldean Form (Aqua Breed)",
+        "name": "Paldean Form (Aqua Breed) Tauros",
         "types": [
           "fighting",
           "water"
         ],
         "spriteId": 10252
+      },
+      {
+        "formId": "tauros-paldea-combat-breed",
+        "name": "Paldean Form (Combat Breed) Tauros",
+        "types": [
+          "fighting"
+        ],
+        "spriteId": 10250
       }
     ]
   },
@@ -1778,17 +1982,7 @@
     ],
     "gender": "male-female",
     "spriteId": 133,
-    "region": "Kanto",
-    "forms": [
-      {
-        "formId": "eevee-starter",
-        "name": "Partner Eevee",
-        "types": [
-          "normal"
-        ],
-        "spriteId": 10159
-      }
-    ]
+    "region": "Kanto"
   },
   {
     "id": 134,
@@ -1907,8 +2101,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "articuno",
+        "name": "Articuno",
+        "types": [
+          "ice",
+          "flying"
+        ],
+        "spriteId": 144
+      },
+      {
         "formId": "articuno-galar",
-        "name": "Galarian",
+        "name": "Galarian Articuno",
         "types": [
           "psychic",
           "flying"
@@ -1929,8 +2132,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "zapdos",
+        "name": "Zapdos",
+        "types": [
+          "electric",
+          "flying"
+        ],
+        "spriteId": 145
+      },
+      {
         "formId": "zapdos-galar",
-        "name": "Galarian",
+        "name": "Galarian Zapdos",
         "types": [
           "fighting",
           "flying"
@@ -1951,8 +2163,17 @@
     "region": "Kanto",
     "forms": [
       {
+        "formId": "moltres",
+        "name": "Moltres",
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "spriteId": 146
+      },
+      {
         "formId": "moltres-galar",
-        "name": "Galarian",
+        "name": "Galarian Moltres",
         "types": [
           "dark",
           "flying"
@@ -2073,8 +2294,16 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "typhlosion",
+        "name": "Typhlosion",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 157
+      },
+      {
         "formId": "typhlosion-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Typhlosion",
         "types": [
           "fire",
           "ghost"
@@ -2240,17 +2469,7 @@
     ],
     "gender": "male-female",
     "spriteId": 172,
-    "region": "Johto",
-    "forms": [
-      {
-        "formId": "pichu-spiky-eared",
-        "name": "Spiky-eared",
-        "types": [
-          "electric"
-        ],
-        "spriteId": 172
-      }
-    ]
+    "region": "Johto"
   },
   {
     "id": 173,
@@ -2484,8 +2703,17 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "wooper",
+        "name": "Wooper",
+        "types": [
+          "water",
+          "ground"
+        ],
+        "spriteId": 194
+      },
+      {
         "formId": "wooper-paldea",
-        "name": "Paldean",
+        "name": "Paldean Wooper",
         "types": [
           "poison",
           "ground"
@@ -2548,8 +2776,17 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "slowking",
+        "name": "Slowking",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "spriteId": 199
+      },
+      {
         "formId": "slowking-galar",
-        "name": "Galarian",
+        "name": "Galarian Slowking",
         "types": [
           "poison",
           "psychic"
@@ -2579,8 +2816,16 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "unown",
+        "name": "A Unown",
+        "types": [
+          "psychic"
+        ],
+        "spriteId": 201
+      },
+      {
         "formId": "unown-b",
-        "name": "B",
+        "name": "B Unown",
         "types": [
           "psychic"
         ],
@@ -2588,7 +2833,7 @@
       },
       {
         "formId": "unown-c",
-        "name": "C",
+        "name": "C Unown",
         "types": [
           "psychic"
         ],
@@ -2596,7 +2841,7 @@
       },
       {
         "formId": "unown-d",
-        "name": "D",
+        "name": "D Unown",
         "types": [
           "psychic"
         ],
@@ -2604,7 +2849,7 @@
       },
       {
         "formId": "unown-e",
-        "name": "E",
+        "name": "E Unown",
         "types": [
           "psychic"
         ],
@@ -2612,7 +2857,7 @@
       },
       {
         "formId": "unown-f",
-        "name": "F",
+        "name": "F Unown",
         "types": [
           "psychic"
         ],
@@ -2620,7 +2865,7 @@
       },
       {
         "formId": "unown-g",
-        "name": "G",
+        "name": "G Unown",
         "types": [
           "psychic"
         ],
@@ -2628,7 +2873,7 @@
       },
       {
         "formId": "unown-h",
-        "name": "H",
+        "name": "H Unown",
         "types": [
           "psychic"
         ],
@@ -2636,7 +2881,7 @@
       },
       {
         "formId": "unown-i",
-        "name": "I",
+        "name": "I Unown",
         "types": [
           "psychic"
         ],
@@ -2644,7 +2889,7 @@
       },
       {
         "formId": "unown-j",
-        "name": "J",
+        "name": "J Unown",
         "types": [
           "psychic"
         ],
@@ -2652,7 +2897,7 @@
       },
       {
         "formId": "unown-k",
-        "name": "K",
+        "name": "K Unown",
         "types": [
           "psychic"
         ],
@@ -2660,7 +2905,7 @@
       },
       {
         "formId": "unown-l",
-        "name": "L",
+        "name": "L Unown",
         "types": [
           "psychic"
         ],
@@ -2668,7 +2913,7 @@
       },
       {
         "formId": "unown-m",
-        "name": "M",
+        "name": "M Unown",
         "types": [
           "psychic"
         ],
@@ -2676,7 +2921,7 @@
       },
       {
         "formId": "unown-n",
-        "name": "N",
+        "name": "N Unown",
         "types": [
           "psychic"
         ],
@@ -2684,7 +2929,7 @@
       },
       {
         "formId": "unown-o",
-        "name": "O",
+        "name": "O Unown",
         "types": [
           "psychic"
         ],
@@ -2692,7 +2937,7 @@
       },
       {
         "formId": "unown-p",
-        "name": "P",
+        "name": "P Unown",
         "types": [
           "psychic"
         ],
@@ -2700,7 +2945,7 @@
       },
       {
         "formId": "unown-q",
-        "name": "Q",
+        "name": "Q Unown",
         "types": [
           "psychic"
         ],
@@ -2708,7 +2953,7 @@
       },
       {
         "formId": "unown-r",
-        "name": "R",
+        "name": "R Unown",
         "types": [
           "psychic"
         ],
@@ -2716,7 +2961,7 @@
       },
       {
         "formId": "unown-s",
-        "name": "S",
+        "name": "S Unown",
         "types": [
           "psychic"
         ],
@@ -2724,7 +2969,7 @@
       },
       {
         "formId": "unown-t",
-        "name": "T",
+        "name": "T Unown",
         "types": [
           "psychic"
         ],
@@ -2732,7 +2977,7 @@
       },
       {
         "formId": "unown-u",
-        "name": "U",
+        "name": "U Unown",
         "types": [
           "psychic"
         ],
@@ -2740,7 +2985,7 @@
       },
       {
         "formId": "unown-v",
-        "name": "V",
+        "name": "V Unown",
         "types": [
           "psychic"
         ],
@@ -2748,7 +2993,7 @@
       },
       {
         "formId": "unown-w",
-        "name": "W",
+        "name": "W Unown",
         "types": [
           "psychic"
         ],
@@ -2756,7 +3001,7 @@
       },
       {
         "formId": "unown-x",
-        "name": "X",
+        "name": "X Unown",
         "types": [
           "psychic"
         ],
@@ -2764,7 +3009,7 @@
       },
       {
         "formId": "unown-y",
-        "name": "Y",
+        "name": "Y Unown",
         "types": [
           "psychic"
         ],
@@ -2772,7 +3017,7 @@
       },
       {
         "formId": "unown-z",
-        "name": "Z",
+        "name": "Z Unown",
         "types": [
           "psychic"
         ],
@@ -2780,7 +3025,7 @@
       },
       {
         "formId": "unown-exclamation",
-        "name": "!",
+        "name": "! Unown",
         "types": [
           "psychic"
         ],
@@ -2788,7 +3033,7 @@
       },
       {
         "formId": "unown-question",
-        "name": "?",
+        "name": "? Unown",
         "types": [
           "psychic"
         ],
@@ -2902,8 +3147,17 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "qwilfish",
+        "name": "Qwilfish",
+        "types": [
+          "water",
+          "poison"
+        ],
+        "spriteId": 211
+      },
+      {
         "formId": "qwilfish-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Qwilfish",
         "types": [
           "dark",
           "poison"
@@ -2957,8 +3211,17 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "sneasel",
+        "name": "Sneasel",
+        "types": [
+          "dark",
+          "ice"
+        ],
+        "spriteId": 215
+      },
+      {
         "formId": "sneasel-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Sneasel",
         "types": [
           "fighting",
           "poison"
@@ -3042,8 +3305,17 @@
     "region": "Johto",
     "forms": [
       {
+        "formId": "corsola",
+        "name": "Corsola",
+        "types": [
+          "water",
+          "rock"
+        ],
+        "spriteId": 222
+      },
+      {
         "formId": "corsola-galar",
-        "name": "Galarian",
+        "name": "Galarian Corsola",
         "types": [
           "ghost"
         ],
@@ -3479,8 +3751,16 @@
     "region": "Hoenn",
     "forms": [
       {
+        "formId": "zigzagoon",
+        "name": "Zigzagoon",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 263
+      },
+      {
         "formId": "zigzagoon-galar",
-        "name": "Galarian",
+        "name": "Galarian Zigzagoon",
         "types": [
           "dark",
           "normal"
@@ -3500,8 +3780,16 @@
     "region": "Hoenn",
     "forms": [
       {
+        "formId": "linoone",
+        "name": "Linoone",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 264
+      },
+      {
         "formId": "linoone-galar",
-        "name": "Galarian",
+        "name": "Galarian Linoone",
         "types": [
           "dark",
           "normal"
@@ -4430,28 +4718,36 @@
     "region": "Hoenn",
     "forms": [
       {
+        "formId": "castform",
+        "name": "Normal Castform",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 351
+      },
+      {
         "formId": "castform-sunny",
-        "name": "Sunny",
+        "name": "Sunny Castform",
         "types": [
           "fire"
         ],
         "spriteId": 10013
       },
       {
-        "formId": "castform-rainy",
-        "name": "Rainy",
-        "types": [
-          "water"
-        ],
-        "spriteId": 10014
-      },
-      {
         "formId": "castform-snowy",
-        "name": "Snowy",
+        "name": "Snowy Castform",
         "types": [
           "ice"
         ],
         "spriteId": 10015
+      },
+      {
+        "formId": "castform-rainy",
+        "name": "Rainy Castform",
+        "types": [
+          "water"
+        ],
+        "spriteId": 10014
       }
     ]
   },
@@ -4819,8 +5115,24 @@
     "region": "Hoenn",
     "forms": [
       {
+        "formId": "deoxys-normal",
+        "name": "Normal Forme Deoxys",
+        "types": [
+          "psychic"
+        ],
+        "spriteId": 386
+      },
+      {
+        "formId": "deoxys-speed",
+        "name": "Speed Forme Deoxys",
+        "types": [
+          "psychic"
+        ],
+        "spriteId": 10003
+      },
+      {
         "formId": "deoxys-attack",
-        "name": "Attack Forme",
+        "name": "Attack Forme Deoxys",
         "types": [
           "psychic"
         ],
@@ -4828,19 +5140,11 @@
       },
       {
         "formId": "deoxys-defense",
-        "name": "Defense Forme",
+        "name": "Defense Forme Deoxys",
         "types": [
           "psychic"
         ],
         "spriteId": 10002
-      },
-      {
-        "formId": "deoxys-speed",
-        "name": "Speed Forme",
-        "types": [
-          "psychic"
-        ],
-        "spriteId": 10003
       }
     ]
   },
@@ -5117,8 +5421,8 @@
     "region": "Sinnoh",
     "forms": [
       {
-        "formId": "burmy-sandy",
-        "name": "Sandy Cloak",
+        "formId": "burmy",
+        "name": "Plant Cloak Burmy",
         "types": [
           "bug"
         ],
@@ -5126,7 +5430,15 @@
       },
       {
         "formId": "burmy-trash",
-        "name": "Trash Cloak",
+        "name": "Trash Cloak Burmy",
+        "types": [
+          "bug"
+        ],
+        "spriteId": 412
+      },
+      {
+        "formId": "burmy-sandy",
+        "name": "Sandy Cloak Burmy",
         "types": [
           "bug"
         ],
@@ -5146,22 +5458,31 @@
     "region": "Sinnoh",
     "forms": [
       {
-        "formId": "wormadam-sandy",
-        "name": "Sandy Cloak",
+        "formId": "wormadam-plant",
+        "name": "Plant Cloak Wormadam",
         "types": [
           "bug",
-          "ground"
+          "grass"
         ],
-        "spriteId": 10004
+        "spriteId": 413
       },
       {
         "formId": "wormadam-trash",
-        "name": "Trash Cloak",
+        "name": "Trash Cloak Wormadam",
         "types": [
           "bug",
           "steel"
         ],
         "spriteId": 10005
+      },
+      {
+        "formId": "wormadam-sandy",
+        "name": "Sandy Cloak Wormadam",
+        "types": [
+          "bug",
+          "ground"
+        ],
+        "spriteId": 10004
       }
     ]
   },
@@ -5177,8 +5498,17 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "mothim",
+        "name": "plant Mothim",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 414
+      },
+      {
         "formId": "mothim-sandy",
-        "name": "sandy",
+        "name": "sandy Mothim",
         "types": [
           "bug",
           "flying"
@@ -5187,7 +5517,7 @@
       },
       {
         "formId": "mothim-trash",
-        "name": "trash",
+        "name": "trash Mothim",
         "types": [
           "bug",
           "flying"
@@ -5269,8 +5599,16 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "cherrim",
+        "name": "Overcast Cherrim",
+        "types": [
+          "grass"
+        ],
+        "spriteId": 421
+      },
+      {
         "formId": "cherrim-sunshine",
-        "name": "Sunshine",
+        "name": "Sunshine Cherrim",
         "types": [
           "grass"
         ],
@@ -5289,8 +5627,16 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "shellos",
+        "name": "West Sea Shellos",
+        "types": [
+          "water"
+        ],
+        "spriteId": 422
+      },
+      {
         "formId": "shellos-east",
-        "name": "East Sea",
+        "name": "East Sea Shellos",
         "types": [
           "water"
         ],
@@ -5310,8 +5656,17 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "gastrodon",
+        "name": "West Sea Gastrodon",
+        "types": [
+          "water",
+          "ground"
+        ],
+        "spriteId": 423
+      },
+      {
         "formId": "gastrodon-east",
-        "name": "East Sea",
+        "name": "East Sea Gastrodon",
         "types": [
           "water",
           "ground"
@@ -5913,31 +6268,13 @@
     "region": "Sinnoh",
     "forms": [
       {
-        "formId": "rotom-heat",
-        "name": "Heat Rotom",
+        "formId": "rotom",
+        "name": "Rotom",
         "types": [
           "electric",
-          "fire"
+          "ghost"
         ],
-        "spriteId": 10008
-      },
-      {
-        "formId": "rotom-wash",
-        "name": "Wash Rotom",
-        "types": [
-          "electric",
-          "water"
-        ],
-        "spriteId": 10009
-      },
-      {
-        "formId": "rotom-frost",
-        "name": "Frost Rotom",
-        "types": [
-          "electric",
-          "ice"
-        ],
-        "spriteId": 10010
+        "spriteId": 479
       },
       {
         "formId": "rotom-fan",
@@ -5956,6 +6293,33 @@
           "grass"
         ],
         "spriteId": 10012
+      },
+      {
+        "formId": "rotom-frost",
+        "name": "Frost Rotom",
+        "types": [
+          "electric",
+          "ice"
+        ],
+        "spriteId": 10010
+      },
+      {
+        "formId": "rotom-heat",
+        "name": "Heat Rotom",
+        "types": [
+          "electric",
+          "fire"
+        ],
+        "spriteId": 10008
+      },
+      {
+        "formId": "rotom-wash",
+        "name": "Wash Rotom",
+        "types": [
+          "electric",
+          "water"
+        ],
+        "spriteId": 10009
       }
     ]
   },
@@ -6001,8 +6365,17 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "dialga",
+        "name": "Dialga",
+        "types": [
+          "steel",
+          "dragon"
+        ],
+        "spriteId": 483
+      },
+      {
         "formId": "dialga-origin",
-        "name": "Origin Forme",
+        "name": "Origin Forme Dialga",
         "types": [
           "steel",
           "dragon"
@@ -6023,8 +6396,17 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "palkia",
+        "name": "Palkia",
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "spriteId": 484
+      },
+      {
         "formId": "palkia-origin",
-        "name": "Origin Forme",
+        "name": "Origin Forme Palkia",
         "types": [
           "water",
           "dragon"
@@ -6066,8 +6448,17 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "giratina-altered",
+        "name": "Altered Forme Giratina",
+        "types": [
+          "ghost",
+          "dragon"
+        ],
+        "spriteId": 487
+      },
+      {
         "formId": "giratina-origin",
-        "name": "Origin Forme",
+        "name": "Origin Forme Giratina",
         "types": [
           "ghost",
           "dragon"
@@ -6107,8 +6498,16 @@
     "region": "Sinnoh",
     "forms": [
       {
+        "formId": "shaymin-land",
+        "name": "Land Forme Shaymin",
+        "types": [
+          "grass"
+        ],
+        "spriteId": 492
+      },
+      {
         "formId": "shaymin-sky",
-        "name": "Sky Forme",
+        "name": "Sky Forme Shaymin",
         "types": [
           "grass",
           "flying"
@@ -6221,8 +6620,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "samurott",
+        "name": "Samurott",
+        "types": [
+          "water"
+        ],
+        "spriteId": 503
+      },
+      {
         "formId": "samurott-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Samurott",
         "types": [
           "water",
           "dark"
@@ -6708,8 +7115,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "lilligant",
+        "name": "Lilligant",
+        "types": [
+          "grass"
+        ],
+        "spriteId": 549
+      },
+      {
         "formId": "lilligant-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Lilligant",
         "types": [
           "grass",
           "fighting"
@@ -6729,20 +7144,28 @@
     "region": "Unova",
     "forms": [
       {
-        "formId": "basculin-blue-striped",
-        "name": "Blue-Striped",
+        "formId": "basculin-red-striped",
+        "name": "Red-Striped Basculin",
         "types": [
           "water"
         ],
-        "spriteId": 10016
+        "spriteId": 550
       },
       {
         "formId": "basculin-white-striped",
-        "name": "White-Striped",
+        "name": "White-Striped Basculin",
         "types": [
           "water"
         ],
         "spriteId": 10247
+      },
+      {
+        "formId": "basculin-blue-striped",
+        "name": "Blue-Striped Basculin",
+        "types": [
+          "water"
+        ],
+        "spriteId": 10016
       }
     ]
   },
@@ -6790,8 +7213,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "darumaka",
+        "name": "Darumaka",
+        "types": [
+          "fire"
+        ],
+        "spriteId": 554
+      },
+      {
         "formId": "darumaka-galar",
-        "name": "Galarian",
+        "name": "Galarian Darumaka",
         "types": [
           "ice"
         ],
@@ -6810,30 +7241,20 @@
     "region": "Unova",
     "forms": [
       {
-        "formId": "darmanitan-zen",
-        "name": "Zen Mode",
+        "formId": "darmanitan-standard",
+        "name": "Standard Mode Darmanitan",
         "types": [
-          "fire",
-          "psychic"
+          "fire"
         ],
-        "spriteId": 10017
+        "spriteId": 555
       },
       {
         "formId": "darmanitan-galar-standard",
-        "name": "Galarian",
+        "name": "Galarian Darmanitan",
         "types": [
           "ice"
         ],
         "spriteId": 10177
-      },
-      {
-        "formId": "darmanitan-galar-zen",
-        "name": "Zen Mode",
-        "types": [
-          "ice",
-          "fire"
-        ],
-        "spriteId": 10178
       }
     ]
   },
@@ -6913,8 +7334,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "yamask",
+        "name": "Yamask",
+        "types": [
+          "ghost"
+        ],
+        "spriteId": 562
+      },
+      {
         "formId": "yamask-galar",
-        "name": "Galarian",
+        "name": "Galarian Yamask",
         "types": [
           "ground",
           "ghost"
@@ -7008,8 +7437,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "zorua",
+        "name": "Zorua",
+        "types": [
+          "dark"
+        ],
+        "spriteId": 570
+      },
+      {
         "formId": "zorua-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Zorua",
         "types": [
           "normal",
           "ghost"
@@ -7029,8 +7466,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "zoroark",
+        "name": "Zoroark",
+        "types": [
+          "dark"
+        ],
+        "spriteId": 571
+      },
+      {
         "formId": "zoroark-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Zoroark",
         "types": [
           "normal",
           "ghost"
@@ -7183,8 +7628,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "deerling",
+        "name": "Spring Deerling",
+        "types": [
+          "normal",
+          "grass"
+        ],
+        "spriteId": 585
+      },
+      {
         "formId": "deerling-summer",
-        "name": "Summer",
+        "name": "Summer Deerling",
         "types": [
           "normal",
           "grass"
@@ -7193,7 +7647,7 @@
       },
       {
         "formId": "deerling-autumn",
-        "name": "Autumn",
+        "name": "Autumn Deerling",
         "types": [
           "normal",
           "grass"
@@ -7202,7 +7656,7 @@
       },
       {
         "formId": "deerling-winter",
-        "name": "Winter",
+        "name": "Winter Deerling",
         "types": [
           "normal",
           "grass"
@@ -7223,8 +7677,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "sawsbuck",
+        "name": "Spring Sawsbuck",
+        "types": [
+          "normal",
+          "grass"
+        ],
+        "spriteId": 586
+      },
+      {
         "formId": "sawsbuck-summer",
-        "name": "Summer",
+        "name": "Summer Sawsbuck",
         "types": [
           "normal",
           "grass"
@@ -7233,7 +7696,7 @@
       },
       {
         "formId": "sawsbuck-autumn",
-        "name": "Autumn",
+        "name": "Autumn Sawsbuck",
         "types": [
           "normal",
           "grass"
@@ -7242,7 +7705,7 @@
       },
       {
         "formId": "sawsbuck-winter",
-        "name": "Winter",
+        "name": "Winter Sawsbuck",
         "types": [
           "normal",
           "grass"
@@ -7314,18 +7777,7 @@
     ],
     "gender": "male-female",
     "spriteId": 592,
-    "region": "Unova",
-    "forms": [
-      {
-        "formId": "frillish-female",
-        "name": "Female",
-        "types": [
-          "water",
-          "ghost"
-        ],
-        "spriteId": 592
-      }
-    ]
+    "region": "Unova"
   },
   {
     "id": 593,
@@ -7336,18 +7788,7 @@
     ],
     "gender": "male-female",
     "spriteId": 593,
-    "region": "Unova",
-    "forms": [
-      {
-        "formId": "jellicent-female",
-        "name": "Female",
-        "types": [
-          "water",
-          "ghost"
-        ],
-        "spriteId": 593
-      }
-    ]
+    "region": "Unova"
   },
   {
     "id": 594,
@@ -7608,8 +8049,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "stunfisk",
+        "name": "Stunfisk",
+        "types": [
+          "ground",
+          "electric"
+        ],
+        "spriteId": 618
+      },
+      {
         "formId": "stunfisk-galar",
-        "name": "Galarian",
+        "name": "Galarian Stunfisk",
         "types": [
           "ground",
           "steel"
@@ -7725,8 +8175,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "braviary",
+        "name": "Braviary",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "spriteId": 628
+      },
+      {
         "formId": "braviary-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Braviary",
         "types": [
           "psychic",
           "flying"
@@ -7877,8 +8336,16 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "tornadus-incarnate",
+        "name": "Incarnate Forme Tornadus",
+        "types": [
+          "flying"
+        ],
+        "spriteId": 641
+      },
+      {
         "formId": "tornadus-therian",
-        "name": "Therian Forme",
+        "name": "Therian Forme Tornadus",
         "types": [
           "flying"
         ],
@@ -7898,8 +8365,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "thundurus-incarnate",
+        "name": "Incarnate Forme Thundurus",
+        "types": [
+          "electric",
+          "flying"
+        ],
+        "spriteId": 642
+      },
+      {
         "formId": "thundurus-therian",
-        "name": "Therian Forme",
+        "name": "Therian Forme Thundurus",
         "types": [
           "electric",
           "flying"
@@ -7942,8 +8418,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "landorus-incarnate",
+        "name": "Incarnate Forme Landorus",
+        "types": [
+          "ground",
+          "flying"
+        ],
+        "spriteId": 645
+      },
+      {
         "formId": "landorus-therian",
-        "name": "Therian Forme",
+        "name": "Therian Forme Landorus",
         "types": [
           "ground",
           "flying"
@@ -7963,6 +8448,15 @@
     "spriteId": 646,
     "region": "Unova",
     "forms": [
+      {
+        "formId": "kyurem",
+        "name": "Kyurem",
+        "types": [
+          "dragon",
+          "ice"
+        ],
+        "spriteId": 646
+      },
       {
         "formId": "kyurem-black",
         "name": "Black Kyurem",
@@ -7995,8 +8489,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "keldeo-ordinary",
+        "name": "Ordinary Keldeo",
+        "types": [
+          "water",
+          "fighting"
+        ],
+        "spriteId": 647
+      },
+      {
         "formId": "keldeo-resolute",
-        "name": "Resolute",
+        "name": "Resolute Keldeo",
         "types": [
           "water",
           "fighting"
@@ -8017,8 +8520,17 @@
     "region": "Unova",
     "forms": [
       {
+        "formId": "meloetta-aria",
+        "name": "Aria Forme Meloetta",
+        "types": [
+          "normal",
+          "psychic"
+        ],
+        "spriteId": 648
+      },
+      {
         "formId": "meloetta-pirouette",
-        "name": "Pirouette Forme",
+        "name": "Pirouette Forme Meloetta",
         "types": [
           "normal",
           "fighting"
@@ -8039,17 +8551,8 @@
     "region": "Unova",
     "forms": [
       {
-        "formId": "genesect-douse",
-        "name": "Douse Drive",
-        "types": [
-          "bug",
-          "steel"
-        ],
-        "spriteId": 649
-      },
-      {
-        "formId": "genesect-shock",
-        "name": "Shock Drive",
+        "formId": "genesect",
+        "name": "Genesect",
         "types": [
           "bug",
           "steel"
@@ -8058,7 +8561,25 @@
       },
       {
         "formId": "genesect-burn",
-        "name": "Burn Drive",
+        "name": "Burn Drive Genesect",
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "spriteId": 649
+      },
+      {
+        "formId": "genesect-shock",
+        "name": "Shock Drive Genesect",
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "spriteId": 649
+      },
+      {
+        "formId": "genesect-douse",
+        "name": "Douse Drive Genesect",
         "types": [
           "bug",
           "steel"
@@ -8067,7 +8588,7 @@
       },
       {
         "formId": "genesect-chill",
-        "name": "Chill Drive",
+        "name": "Chill Drive Genesect",
         "types": [
           "bug",
           "steel"
@@ -8170,6 +8691,15 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "greninja",
+        "name": "Greninja",
+        "types": [
+          "water",
+          "dark"
+        ],
+        "spriteId": 658
+      },
+      {
         "formId": "greninja-ash",
         "name": "Ash-Greninja",
         "types": [
@@ -8245,8 +8775,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "scatterbug",
+        "name": "icy-snow Scatterbug",
+        "types": [
+          "bug"
+        ],
+        "spriteId": 664
+      },
+      {
         "formId": "scatterbug-polar",
-        "name": "polar",
+        "name": "polar Scatterbug",
         "types": [
           "bug"
         ],
@@ -8254,7 +8792,7 @@
       },
       {
         "formId": "scatterbug-tundra",
-        "name": "tundra",
+        "name": "tundra Scatterbug",
         "types": [
           "bug"
         ],
@@ -8262,7 +8800,7 @@
       },
       {
         "formId": "scatterbug-continental",
-        "name": "continental",
+        "name": "continental Scatterbug",
         "types": [
           "bug"
         ],
@@ -8270,7 +8808,7 @@
       },
       {
         "formId": "scatterbug-garden",
-        "name": "garden",
+        "name": "garden Scatterbug",
         "types": [
           "bug"
         ],
@@ -8278,7 +8816,7 @@
       },
       {
         "formId": "scatterbug-elegant",
-        "name": "elegant",
+        "name": "elegant Scatterbug",
         "types": [
           "bug"
         ],
@@ -8286,7 +8824,7 @@
       },
       {
         "formId": "scatterbug-meadow",
-        "name": "meadow",
+        "name": "meadow Scatterbug",
         "types": [
           "bug"
         ],
@@ -8294,7 +8832,7 @@
       },
       {
         "formId": "scatterbug-modern",
-        "name": "modern",
+        "name": "modern Scatterbug",
         "types": [
           "bug"
         ],
@@ -8302,7 +8840,7 @@
       },
       {
         "formId": "scatterbug-marine",
-        "name": "marine",
+        "name": "marine Scatterbug",
         "types": [
           "bug"
         ],
@@ -8310,7 +8848,7 @@
       },
       {
         "formId": "scatterbug-archipelago",
-        "name": "archipelago",
+        "name": "archipelago Scatterbug",
         "types": [
           "bug"
         ],
@@ -8318,7 +8856,7 @@
       },
       {
         "formId": "scatterbug-high-plains",
-        "name": "high-plains",
+        "name": "high-plains Scatterbug",
         "types": [
           "bug"
         ],
@@ -8326,7 +8864,7 @@
       },
       {
         "formId": "scatterbug-sandstorm",
-        "name": "sandstorm",
+        "name": "sandstorm Scatterbug",
         "types": [
           "bug"
         ],
@@ -8334,7 +8872,7 @@
       },
       {
         "formId": "scatterbug-river",
-        "name": "river",
+        "name": "river Scatterbug",
         "types": [
           "bug"
         ],
@@ -8342,7 +8880,7 @@
       },
       {
         "formId": "scatterbug-monsoon",
-        "name": "monsoon",
+        "name": "monsoon Scatterbug",
         "types": [
           "bug"
         ],
@@ -8350,7 +8888,7 @@
       },
       {
         "formId": "scatterbug-savanna",
-        "name": "savanna",
+        "name": "savanna Scatterbug",
         "types": [
           "bug"
         ],
@@ -8358,7 +8896,7 @@
       },
       {
         "formId": "scatterbug-sun",
-        "name": "sun",
+        "name": "sun Scatterbug",
         "types": [
           "bug"
         ],
@@ -8366,7 +8904,7 @@
       },
       {
         "formId": "scatterbug-ocean",
-        "name": "ocean",
+        "name": "ocean Scatterbug",
         "types": [
           "bug"
         ],
@@ -8374,7 +8912,7 @@
       },
       {
         "formId": "scatterbug-jungle",
-        "name": "jungle",
+        "name": "jungle Scatterbug",
         "types": [
           "bug"
         ],
@@ -8382,7 +8920,7 @@
       },
       {
         "formId": "scatterbug-fancy",
-        "name": "fancy",
+        "name": "fancy Scatterbug",
         "types": [
           "bug"
         ],
@@ -8390,7 +8928,7 @@
       },
       {
         "formId": "scatterbug-poke-ball",
-        "name": "poke-ball",
+        "name": "poke-ball Scatterbug",
         "types": [
           "bug"
         ],
@@ -8409,8 +8947,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "spewpa",
+        "name": "icy-snow Spewpa",
+        "types": [
+          "bug"
+        ],
+        "spriteId": 665
+      },
+      {
         "formId": "spewpa-polar",
-        "name": "polar",
+        "name": "polar Spewpa",
         "types": [
           "bug"
         ],
@@ -8418,7 +8964,7 @@
       },
       {
         "formId": "spewpa-tundra",
-        "name": "tundra",
+        "name": "tundra Spewpa",
         "types": [
           "bug"
         ],
@@ -8426,7 +8972,7 @@
       },
       {
         "formId": "spewpa-continental",
-        "name": "continental",
+        "name": "continental Spewpa",
         "types": [
           "bug"
         ],
@@ -8434,7 +8980,7 @@
       },
       {
         "formId": "spewpa-garden",
-        "name": "garden",
+        "name": "garden Spewpa",
         "types": [
           "bug"
         ],
@@ -8442,7 +8988,7 @@
       },
       {
         "formId": "spewpa-elegant",
-        "name": "elegant",
+        "name": "elegant Spewpa",
         "types": [
           "bug"
         ],
@@ -8450,7 +8996,7 @@
       },
       {
         "formId": "spewpa-meadow",
-        "name": "meadow",
+        "name": "meadow Spewpa",
         "types": [
           "bug"
         ],
@@ -8458,7 +9004,7 @@
       },
       {
         "formId": "spewpa-modern",
-        "name": "modern",
+        "name": "modern Spewpa",
         "types": [
           "bug"
         ],
@@ -8466,7 +9012,7 @@
       },
       {
         "formId": "spewpa-marine",
-        "name": "marine",
+        "name": "marine Spewpa",
         "types": [
           "bug"
         ],
@@ -8474,7 +9020,7 @@
       },
       {
         "formId": "spewpa-archipelago",
-        "name": "archipelago",
+        "name": "archipelago Spewpa",
         "types": [
           "bug"
         ],
@@ -8482,7 +9028,7 @@
       },
       {
         "formId": "spewpa-high-plains",
-        "name": "high-plains",
+        "name": "high-plains Spewpa",
         "types": [
           "bug"
         ],
@@ -8490,7 +9036,7 @@
       },
       {
         "formId": "spewpa-sandstorm",
-        "name": "sandstorm",
+        "name": "sandstorm Spewpa",
         "types": [
           "bug"
         ],
@@ -8498,7 +9044,7 @@
       },
       {
         "formId": "spewpa-river",
-        "name": "river",
+        "name": "river Spewpa",
         "types": [
           "bug"
         ],
@@ -8506,7 +9052,7 @@
       },
       {
         "formId": "spewpa-monsoon",
-        "name": "monsoon",
+        "name": "monsoon Spewpa",
         "types": [
           "bug"
         ],
@@ -8514,7 +9060,7 @@
       },
       {
         "formId": "spewpa-savanna",
-        "name": "savanna",
+        "name": "savanna Spewpa",
         "types": [
           "bug"
         ],
@@ -8522,7 +9068,7 @@
       },
       {
         "formId": "spewpa-sun",
-        "name": "sun",
+        "name": "sun Spewpa",
         "types": [
           "bug"
         ],
@@ -8530,7 +9076,7 @@
       },
       {
         "formId": "spewpa-ocean",
-        "name": "ocean",
+        "name": "ocean Spewpa",
         "types": [
           "bug"
         ],
@@ -8538,7 +9084,7 @@
       },
       {
         "formId": "spewpa-jungle",
-        "name": "jungle",
+        "name": "jungle Spewpa",
         "types": [
           "bug"
         ],
@@ -8546,7 +9092,7 @@
       },
       {
         "formId": "spewpa-fancy",
-        "name": "fancy",
+        "name": "fancy Spewpa",
         "types": [
           "bug"
         ],
@@ -8554,7 +9100,7 @@
       },
       {
         "formId": "spewpa-poke-ball",
-        "name": "poke-ball",
+        "name": "poke-ball Spewpa",
         "types": [
           "bug"
         ],
@@ -8574,71 +9120,8 @@
     "region": "Kalos",
     "forms": [
       {
-        "formId": "vivillon-icy-snow",
-        "name": "Icy Snow Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-polar",
-        "name": "Polar Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-tundra",
-        "name": "Tundra Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-continental",
-        "name": "Continental Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-garden",
-        "name": "Garden Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-elegant",
-        "name": "Elegant Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-modern",
-        "name": "Modern Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-marine",
-        "name": "Marine Pattern",
+        "formId": "vivillon",
+        "name": "Meadow Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8647,7 +9130,25 @@
       },
       {
         "formId": "vivillon-archipelago",
-        "name": "Archipelago Pattern",
+        "name": "Archipelago Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-polar",
+        "name": "Polar Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-modern",
+        "name": "Modern Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8656,43 +9157,7 @@
       },
       {
         "formId": "vivillon-high-plains",
-        "name": "High Plains Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-sandstorm",
-        "name": "Sandstorm Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-river",
-        "name": "River Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-monsoon",
-        "name": "Monsoon Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-savanna",
-        "name": "Savanna Pattern",
+        "name": "High Plains Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8701,16 +9166,7 @@
       },
       {
         "formId": "vivillon-sun",
-        "name": "Sun Pattern",
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "spriteId": 666
-      },
-      {
-        "formId": "vivillon-ocean",
-        "name": "Ocean Pattern",
+        "name": "Sun Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8719,7 +9175,7 @@
       },
       {
         "formId": "vivillon-jungle",
-        "name": "Jungle Pattern",
+        "name": "Jungle Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8727,8 +9183,8 @@
         "spriteId": 666
       },
       {
-        "formId": "vivillon-fancy",
-        "name": "Fancy Pattern",
+        "formId": "vivillon-monsoon",
+        "name": "Monsoon Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8737,7 +9193,106 @@
       },
       {
         "formId": "vivillon-poke-ball",
-        "name": "Poké Ball Pattern",
+        "name": "Poké Ball Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-icy-snow",
+        "name": "Icy Snow Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-continental",
+        "name": "Continental Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-elegant",
+        "name": "Elegant Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-savanna",
+        "name": "Savanna Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-garden",
+        "name": "Garden Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-river",
+        "name": "River Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-marine",
+        "name": "Marine Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-sandstorm",
+        "name": "Sandstorm Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-fancy",
+        "name": "Fancy Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-ocean",
+        "name": "Ocean Pattern Vivillon",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "spriteId": 666
+      },
+      {
+        "formId": "vivillon-tundra",
+        "name": "Tundra Pattern Vivillon",
         "types": [
           "bug",
           "flying"
@@ -8779,8 +9334,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "flabebe",
+        "name": "Red Flower Flabébé",
+        "types": [
+          "fairy"
+        ],
+        "spriteId": 669
+      },
+      {
         "formId": "flabebe-yellow",
-        "name": "Yellow Flower",
+        "name": "Yellow Flower Flabébé",
         "types": [
           "fairy"
         ],
@@ -8788,7 +9351,7 @@
       },
       {
         "formId": "flabebe-orange",
-        "name": "Orange Flower",
+        "name": "Orange Flower Flabébé",
         "types": [
           "fairy"
         ],
@@ -8796,7 +9359,7 @@
       },
       {
         "formId": "flabebe-blue",
-        "name": "Blue Flower",
+        "name": "Blue Flower Flabébé",
         "types": [
           "fairy"
         ],
@@ -8804,7 +9367,7 @@
       },
       {
         "formId": "flabebe-white",
-        "name": "White Flower",
+        "name": "White Flower Flabébé",
         "types": [
           "fairy"
         ],
@@ -8823,16 +9386,16 @@
     "region": "Kalos",
     "forms": [
       {
-        "formId": "floette-eternal",
-        "name": "Eternal Flower",
+        "formId": "floette",
+        "name": "Red Flower Floette",
         "types": [
           "fairy"
         ],
-        "spriteId": 10061
+        "spriteId": 670
       },
       {
         "formId": "floette-yellow",
-        "name": "Yellow Flower",
+        "name": "Yellow Flower Floette",
         "types": [
           "fairy"
         ],
@@ -8840,15 +9403,7 @@
       },
       {
         "formId": "floette-orange",
-        "name": "Orange Flower",
-        "types": [
-          "fairy"
-        ],
-        "spriteId": 670
-      },
-      {
-        "formId": "floette-blue",
-        "name": "Blue Flower",
+        "name": "Orange Flower Floette",
         "types": [
           "fairy"
         ],
@@ -8856,11 +9411,27 @@
       },
       {
         "formId": "floette-white",
-        "name": "White Flower",
+        "name": "White Flower Floette",
         "types": [
           "fairy"
         ],
         "spriteId": 670
+      },
+      {
+        "formId": "floette-blue",
+        "name": "Blue Flower Floette",
+        "types": [
+          "fairy"
+        ],
+        "spriteId": 670
+      },
+      {
+        "formId": "floette-eternal",
+        "name": "Eternal Flower Floette",
+        "types": [
+          "fairy"
+        ],
+        "spriteId": 10061
       }
     ]
   },
@@ -8875,8 +9446,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "florges",
+        "name": "Red Flower Florges",
+        "types": [
+          "fairy"
+        ],
+        "spriteId": 671
+      },
+      {
         "formId": "florges-yellow",
-        "name": "Yellow Flower",
+        "name": "Yellow Flower Florges",
         "types": [
           "fairy"
         ],
@@ -8884,7 +9463,7 @@
       },
       {
         "formId": "florges-orange",
-        "name": "Orange Flower",
+        "name": "Orange Flower Florges",
         "types": [
           "fairy"
         ],
@@ -8892,7 +9471,7 @@
       },
       {
         "formId": "florges-blue",
-        "name": "Blue Flower",
+        "name": "Blue Flower Florges",
         "types": [
           "fairy"
         ],
@@ -8900,7 +9479,7 @@
       },
       {
         "formId": "florges-white",
-        "name": "White Flower",
+        "name": "White Flower Florges",
         "types": [
           "fairy"
         ],
@@ -8960,8 +9539,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "furfrou",
+        "name": "Natural Furfrou",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 676
+      },
+      {
         "formId": "furfrou-heart",
-        "name": "Heart Trim",
+        "name": "Heart Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -8969,23 +9556,7 @@
       },
       {
         "formId": "furfrou-star",
-        "name": "Star Trim",
-        "types": [
-          "normal"
-        ],
-        "spriteId": 676
-      },
-      {
-        "formId": "furfrou-diamond",
-        "name": "Diamond Trim",
-        "types": [
-          "normal"
-        ],
-        "spriteId": 676
-      },
-      {
-        "formId": "furfrou-matron",
-        "name": "Matron Trim",
+        "name": "Star Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -8993,7 +9564,7 @@
       },
       {
         "formId": "furfrou-dandy",
-        "name": "Dandy Trim",
+        "name": "Dandy Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -9001,7 +9572,7 @@
       },
       {
         "formId": "furfrou-la-reine",
-        "name": "La Reine Trim",
+        "name": "La Reine Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -9009,7 +9580,15 @@
       },
       {
         "formId": "furfrou-kabuki",
-        "name": "Kabuki Trim",
+        "name": "Kabuki Trim Furfrou",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 676
+      },
+      {
+        "formId": "furfrou-matron",
+        "name": "Matron Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -9017,7 +9596,15 @@
       },
       {
         "formId": "furfrou-pharaoh",
-        "name": "Pharaoh Trim",
+        "name": "Pharaoh Trim Furfrou",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 676
+      },
+      {
+        "formId": "furfrou-diamond",
+        "name": "Diamond Trim Furfrou",
         "types": [
           "normal"
         ],
@@ -9043,17 +9630,7 @@
     ],
     "gender": "male-female",
     "spriteId": 678,
-    "region": "Kalos",
-    "forms": [
-      {
-        "formId": "meowstic-female",
-        "name": "Female",
-        "types": [
-          "psychic"
-        ],
-        "spriteId": 10025
-      }
-    ]
+    "region": "Kalos"
   },
   {
     "id": 679,
@@ -9086,18 +9663,7 @@
     ],
     "gender": "male-female",
     "spriteId": 681,
-    "region": "Kalos",
-    "forms": [
-      {
-        "formId": "aegislash-blade",
-        "name": "Blade Forme",
-        "types": [
-          "steel",
-          "ghost"
-        ],
-        "spriteId": 10026
-      }
-    ]
+    "region": "Kalos"
   },
   {
     "id": 682,
@@ -9355,8 +9921,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "sliggoo",
+        "name": "Sliggoo",
+        "types": [
+          "dragon"
+        ],
+        "spriteId": 705
+      },
+      {
         "formId": "sliggoo-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Sliggoo",
         "types": [
           "steel",
           "dragon"
@@ -9376,8 +9950,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "goodra",
+        "name": "Goodra",
+        "types": [
+          "dragon"
+        ],
+        "spriteId": 706
+      },
+      {
         "formId": "goodra-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Goodra",
         "types": [
           "steel",
           "dragon"
@@ -9428,36 +10010,7 @@
     ],
     "gender": "male-female",
     "spriteId": 710,
-    "region": "Kalos",
-    "forms": [
-      {
-        "formId": "pumpkaboo-small",
-        "name": "Small Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10027
-      },
-      {
-        "formId": "pumpkaboo-large",
-        "name": "Large Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10028
-      },
-      {
-        "formId": "pumpkaboo-super",
-        "name": "Super Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10029
-      }
-    ]
+    "region": "Kalos"
   },
   {
     "id": 711,
@@ -9468,36 +10021,7 @@
     ],
     "gender": "male-female",
     "spriteId": 711,
-    "region": "Kalos",
-    "forms": [
-      {
-        "formId": "gourgeist-small",
-        "name": "Small Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10030
-      },
-      {
-        "formId": "gourgeist-large",
-        "name": "Large Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10031
-      },
-      {
-        "formId": "gourgeist-super",
-        "name": "Super Size",
-        "types": [
-          "ghost",
-          "grass"
-        ],
-        "spriteId": 10032
-      }
-    ]
+    "region": "Kalos"
   },
   {
     "id": 712,
@@ -9520,8 +10044,16 @@
     "region": "Kalos",
     "forms": [
       {
+        "formId": "avalugg",
+        "name": "Avalugg",
+        "types": [
+          "ice"
+        ],
+        "spriteId": 713
+      },
+      {
         "formId": "avalugg-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Avalugg",
         "types": [
           "ice",
           "rock"
@@ -9560,17 +10092,7 @@
     ],
     "gender": "none",
     "spriteId": 716,
-    "region": "Kalos",
-    "forms": [
-      {
-        "formId": "xerneas-neutral",
-        "name": "Neutral Mode",
-        "types": [
-          "fairy"
-        ],
-        "spriteId": 716
-      }
-    ]
+    "region": "Kalos"
   },
   {
     "id": 717,
@@ -9595,17 +10117,17 @@
     "region": "Kalos",
     "forms": [
       {
-        "formId": "zygarde-10-power-construct",
-        "name": "10% Forme",
+        "formId": "zygarde-50",
+        "name": "50% Forme Zygarde",
         "types": [
           "dragon",
           "ground"
         ],
-        "spriteId": 10118
+        "spriteId": 718
       },
       {
         "formId": "zygarde-complete",
-        "name": "Complete Forme",
+        "name": "Complete Forme Zygarde",
         "types": [
           "dragon",
           "ground"
@@ -9613,13 +10135,13 @@
         "spriteId": 10120
       },
       {
-        "formId": "zygarde-10",
-        "name": "10% Forme",
+        "formId": "zygarde-10-power-construct",
+        "name": "10% Forme Zygarde",
         "types": [
           "dragon",
           "ground"
         ],
-        "spriteId": 10181
+        "spriteId": 10118
       }
     ]
   },
@@ -9645,6 +10167,15 @@
     "spriteId": 720,
     "region": "Kalos",
     "forms": [
+      {
+        "formId": "hoopa",
+        "name": "Hoopa Confined",
+        "types": [
+          "psychic",
+          "ghost"
+        ],
+        "spriteId": 720
+      },
       {
         "formId": "hoopa-unbound",
         "name": "Hoopa Unbound",
@@ -9701,8 +10232,17 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "decidueye",
+        "name": "Decidueye",
+        "types": [
+          "grass",
+          "ghost"
+        ],
+        "spriteId": 724
+      },
+      {
         "formId": "decidueye-hisui",
-        "name": "Hisuian",
+        "name": "Hisuian Decidueye",
         "types": [
           "grass",
           "fighting"
@@ -9827,6 +10367,14 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "gumshoos",
+        "name": "Gumshoos",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 735
+      },
+      {
         "formId": "gumshoos-totem",
         "name": "Totem Gumshoos",
         "types": [
@@ -9868,6 +10416,15 @@
     "spriteId": 738,
     "region": "Alola",
     "forms": [
+      {
+        "formId": "vikavolt",
+        "name": "Vikavolt",
+        "types": [
+          "bug",
+          "electric"
+        ],
+        "spriteId": 738
+      },
       {
         "formId": "vikavolt-totem",
         "name": "Totem Vikavolt",
@@ -9912,17 +10469,26 @@
     "region": "Alola",
     "forms": [
       {
-        "formId": "oricorio-pom-pom",
-        "name": "Pom-Pom Style",
+        "formId": "oricorio-baile",
+        "name": "Baile Style Oricorio",
         "types": [
-          "electric",
+          "fire",
           "flying"
         ],
-        "spriteId": 10123
+        "spriteId": 741
+      },
+      {
+        "formId": "oricorio-sensu",
+        "name": "Sensu Style Oricorio",
+        "types": [
+          "ghost",
+          "flying"
+        ],
+        "spriteId": 10125
       },
       {
         "formId": "oricorio-pau",
-        "name": "Pa’u Style",
+        "name": "Pa’u Style Oricorio",
         "types": [
           "psychic",
           "flying"
@@ -9930,13 +10496,13 @@
         "spriteId": 10124
       },
       {
-        "formId": "oricorio-sensu",
-        "name": "Sensu Style",
+        "formId": "oricorio-pom-pom",
+        "name": "Pom-Pom Style Oricorio",
         "types": [
-          "ghost",
+          "electric",
           "flying"
         ],
-        "spriteId": 10125
+        "spriteId": 10123
       }
     ]
   },
@@ -9963,6 +10529,15 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "ribombee",
+        "name": "Ribombee",
+        "types": [
+          "bug",
+          "fairy"
+        ],
+        "spriteId": 743
+      },
+      {
         "formId": "ribombee-totem",
         "name": "Totem Ribombee",
         "types": [
@@ -9981,17 +10556,7 @@
     ],
     "gender": "male-female",
     "spriteId": 744,
-    "region": "Alola",
-    "forms": [
-      {
-        "formId": "rockruff-own-tempo",
-        "name": "Own Tempo Rockruff",
-        "types": [
-          "rock"
-        ],
-        "spriteId": 10151
-      }
-    ]
+    "region": "Alola"
   },
   {
     "id": 745,
@@ -10004,8 +10569,16 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "lycanroc-midday",
+        "name": "Midday Lycanroc",
+        "types": [
+          "rock"
+        ],
+        "spriteId": 745
+      },
+      {
         "formId": "lycanroc-midnight",
-        "name": "Midnight",
+        "name": "Midnight Lycanroc",
         "types": [
           "rock"
         ],
@@ -10013,7 +10586,7 @@
       },
       {
         "formId": "lycanroc-dusk",
-        "name": "Dusk",
+        "name": "Dusk Lycanroc",
         "types": [
           "rock"
         ],
@@ -10086,6 +10659,15 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "araquanid",
+        "name": "Araquanid",
+        "types": [
+          "water",
+          "bug"
+        ],
+        "spriteId": 752
+      },
+      {
         "formId": "araquanid-totem",
         "name": "Totem Araquanid",
         "types": [
@@ -10116,6 +10698,14 @@
     "spriteId": 754,
     "region": "Alola",
     "forms": [
+      {
+        "formId": "lurantis",
+        "name": "Lurantis",
+        "types": [
+          "grass"
+        ],
+        "spriteId": 754
+      },
       {
         "formId": "lurantis-totem",
         "name": "Totem Lurantis",
@@ -10170,6 +10760,15 @@
     "spriteId": 758,
     "region": "Alola",
     "forms": [
+      {
+        "formId": "salazzle",
+        "name": "Salazzle",
+        "types": [
+          "poison",
+          "fire"
+        ],
+        "spriteId": 758
+      },
       {
         "formId": "salazzle-totem",
         "name": "Totem Salazzle",
@@ -10341,6 +10940,15 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "togedemaru",
+        "name": "Togedemaru",
+        "types": [
+          "electric",
+          "steel"
+        ],
+        "spriteId": 777
+      },
+      {
         "formId": "togedemaru-totem",
         "name": "Totem Togedemaru",
         "types": [
@@ -10416,6 +11024,15 @@
     "spriteId": 784,
     "region": "Alola",
     "forms": [
+      {
+        "formId": "kommo-o",
+        "name": "Kommo-o",
+        "types": [
+          "dragon",
+          "fighting"
+        ],
+        "spriteId": 784
+      },
       {
         "formId": "kommo-o-totem",
         "name": "Totem Kommo-o",
@@ -10600,8 +11217,16 @@
     "region": "Alola",
     "forms": [
       {
+        "formId": "necrozma",
+        "name": "Necrozma",
+        "types": [
+          "psychic"
+        ],
+        "spriteId": 800
+      },
+      {
         "formId": "necrozma-dusk",
-        "name": "Dusk Mane",
+        "name": "Dusk Mane Necrozma",
         "types": [
           "psychic",
           "steel"
@@ -10610,7 +11235,7 @@
       },
       {
         "formId": "necrozma-dawn",
-        "name": "Dawn Wings",
+        "name": "Dawn Wings Necrozma",
         "types": [
           "psychic",
           "ghost"
@@ -11034,8 +11659,17 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "toxtricity-amped",
+        "name": "Amped Toxtricity",
+        "types": [
+          "electric",
+          "poison"
+        ],
+        "spriteId": 849
+      },
+      {
         "formId": "toxtricity-low-key",
-        "name": "Low Key",
+        "name": "Low Key Toxtricity",
         "types": [
           "electric",
           "poison"
@@ -11077,8 +11711,16 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "sinistea",
+        "name": "Phony Sinistea",
+        "types": [
+          "ghost"
+        ],
+        "spriteId": 854
+      },
+      {
         "formId": "sinistea-antique",
-        "name": "Antique",
+        "name": "Antique Sinistea",
         "types": [
           "ghost"
         ],
@@ -11097,8 +11739,16 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "polteageist",
+        "name": "Phony Polteageist",
+        "types": [
+          "ghost"
+        ],
+        "spriteId": 855
+      },
+      {
         "formId": "polteageist-antique",
-        "name": "Antique",
+        "name": "Antique Polteageist",
         "types": [
           "ghost"
         ],
@@ -11284,18 +11934,7 @@
     ],
     "gender": "male-female",
     "spriteId": 876,
-    "region": "Galar",
-    "forms": [
-      {
-        "formId": "indeedee-female",
-        "name": "Female",
-        "types": [
-          "psychic",
-          "normal"
-        ],
-        "spriteId": 10186
-      }
-    ]
+    "region": "Galar"
   },
   {
     "id": 877,
@@ -11306,18 +11945,7 @@
     ],
     "gender": "male-female",
     "spriteId": 877,
-    "region": "Galar",
-    "forms": [
-      {
-        "formId": "morpeko-hangry",
-        "name": "Hangry Mode",
-        "types": [
-          "electric",
-          "dark"
-        ],
-        "spriteId": 10187
-      }
-    ]
+    "region": "Galar"
   },
   {
     "id": 884,
@@ -11374,8 +12002,16 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "zacian",
+        "name": "Hero of Many Battles Zacian",
+        "types": [
+          "fairy"
+        ],
+        "spriteId": 888
+      },
+      {
         "formId": "zacian-crowned",
-        "name": "Crowned Sword",
+        "name": "Crowned Sword Zacian",
         "types": [
           "fairy",
           "steel"
@@ -11392,18 +12028,7 @@
     ],
     "gender": "none",
     "spriteId": 889,
-    "region": "Galar",
-    "forms": [
-      {
-        "formId": "zamazenta-crowned",
-        "name": "Crowned Shield",
-        "types": [
-          "fighting",
-          "steel"
-        ],
-        "spriteId": 10189
-      }
-    ]
+    "region": "Galar"
   },
   {
     "id": 890,
@@ -11414,18 +12039,7 @@
     ],
     "gender": "none",
     "spriteId": 890,
-    "region": "Galar",
-    "forms": [
-      {
-        "formId": "eternatus-eternamax",
-        "name": "Eternamax",
-        "types": [
-          "poison",
-          "dragon"
-        ],
-        "spriteId": 10190
-      }
-    ]
+    "region": "Galar"
   },
   {
     "id": 891,
@@ -11449,8 +12063,17 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "urshifu-single-strike",
+        "name": "Single Strike Style Urshifu",
+        "types": [
+          "fighting",
+          "dark"
+        ],
+        "spriteId": 892
+      },
+      {
         "formId": "urshifu-rapid-strike",
-        "name": "Rapid Strike Style",
+        "name": "Rapid Strike Style Urshifu",
         "types": [
           "fighting",
           "water"
@@ -11471,8 +12094,17 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "zarude",
+        "name": "Zarude",
+        "types": [
+          "dark",
+          "grass"
+        ],
+        "spriteId": 893
+      },
+      {
         "formId": "zarude-dada",
-        "name": "Dada",
+        "name": "Dada Zarude",
         "types": [
           "dark",
           "grass"
@@ -11535,8 +12167,17 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "ursaluna",
+        "name": "Ursaluna",
+        "types": [
+          "ground",
+          "normal"
+        ],
+        "spriteId": 901
+      },
+      {
         "formId": "ursaluna-bloodmoon",
-        "name": "Bloodmoon",
+        "name": "Bloodmoon Ursaluna",
         "types": [
           "ground",
           "normal"
@@ -11579,8 +12220,17 @@
     "region": "Galar",
     "forms": [
       {
+        "formId": "enamorus-incarnate",
+        "name": "Incarnate Forme Enamorus",
+        "types": [
+          "fairy",
+          "flying"
+        ],
+        "spriteId": 905
+      },
+      {
         "formId": "enamorus-therian",
-        "name": "Therian Forme",
+        "name": "Therian Forme Enamorus",
         "types": [
           "fairy",
           "flying"
@@ -11700,17 +12350,7 @@
     ],
     "gender": "male",
     "spriteId": 916,
-    "region": "Paldea",
-    "forms": [
-      {
-        "formId": "oinkologne-female",
-        "name": "Female",
-        "types": [
-          "normal"
-        ],
-        "spriteId": 10254
-      }
-    ]
+    "region": "Paldea"
   },
   {
     "id": 917,
@@ -12197,22 +12837,31 @@
     "region": "Paldea",
     "forms": [
       {
-        "formId": "tatsugiri-droopy",
-        "name": "Droopy",
+        "formId": "tatsugiri-curly",
+        "name": "Curly Tatsugiri",
         "types": [
           "dragon",
           "water"
         ],
-        "spriteId": 10258
+        "spriteId": 978
       },
       {
         "formId": "tatsugiri-stretchy",
-        "name": "Stretchy",
+        "name": "Stretchy Tatsugiri",
         "types": [
           "dragon",
           "water"
         ],
         "spriteId": 10259
+      },
+      {
+        "formId": "tatsugiri-droopy",
+        "name": "Droopy Tatsugiri",
+        "types": [
+          "dragon",
+          "water"
+        ],
+        "spriteId": 10258
       }
     ]
   },
@@ -12249,8 +12898,16 @@
     "region": "Paldea",
     "forms": [
       {
+        "formId": "dudunsparce-two-segment",
+        "name": "Two-Segment Dudunsparce",
+        "types": [
+          "normal"
+        ],
+        "spriteId": 982
+      },
+      {
         "formId": "dudunsparce-three-segment",
-        "name": "Three-Segment",
+        "name": "Three-Segment Dudunsparce",
         "types": [
           "normal"
         ],
@@ -12313,8 +12970,16 @@
     "region": "Paldea",
     "forms": [
       {
+        "formId": "gimmighoul",
+        "name": "Chest Gimmighoul",
+        "types": [
+          "ghost"
+        ],
+        "spriteId": 999
+      },
+      {
         "formId": "gimmighoul-roaming",
-        "name": "Roaming",
+        "name": "Roaming Gimmighoul",
         "types": [
           "ghost"
         ],
@@ -12356,8 +13021,17 @@
     "region": "Paldea",
     "forms": [
       {
+        "formId": "poltchageist",
+        "name": "Counterfeit Poltchageist",
+        "types": [
+          "grass",
+          "ghost"
+        ],
+        "spriteId": 1012
+      },
+      {
         "formId": "poltchageist-artisan",
-        "name": "Artisan",
+        "name": "Artisan Poltchageist",
         "types": [
           "grass",
           "ghost"
@@ -12378,8 +13052,17 @@
     "region": "Paldea",
     "forms": [
       {
+        "formId": "sinistcha",
+        "name": "Unremarkable Sinistcha",
+        "types": [
+          "grass",
+          "ghost"
+        ],
+        "spriteId": 1013
+      },
+      {
         "formId": "sinistcha-masterpiece",
-        "name": "Masterpiece",
+        "name": "Masterpiece Sinistcha",
         "types": [
           "grass",
           "ghost"

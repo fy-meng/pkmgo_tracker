@@ -1,193 +1,179 @@
 [
   {
-    "formId": "butterfree-gmax",
-    "name": "Gigantamax",
+    "id": 3,
+    "name": "Gigantamax Venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gender": "male-female",
+    "spriteId": 10195,
+    "region": "Kanto"
+  },
+  {
+    "id": 6,
+    "name": "Gigantamax Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "gender": "male-female",
+    "spriteId": 10196,
+    "region": "Kanto"
+  },
+  {
+    "id": 9,
+    "name": "Gigantamax Blastoise",
+    "types": [
+      "water"
+    ],
+    "gender": "male-female",
+    "spriteId": 10197,
+    "region": "Kanto"
+  },
+  {
+    "id": 12,
+    "name": "Gigantamax Butterfree",
     "types": [
       "bug",
       "flying"
     ],
+    "gender": "male-female",
     "spriteId": 10198,
-    "baseId": 12
+    "region": "Kanto"
   },
   {
-    "formId": "machamp-gmax",
-    "name": "Gigantamax",
+    "id": 25,
+    "name": "Gigantamax Pikachu",
+    "types": [
+      "electric"
+    ],
+    "gender": "male-female",
+    "spriteId": 10199,
+    "region": "Kanto"
+  },
+  {
+    "id": 52,
+    "name": "Gigantamax Meowth",
+    "types": [
+      "normal"
+    ],
+    "gender": "male-female",
+    "spriteId": 10200,
+    "region": "Kanto"
+  },
+  {
+    "id": 68,
+    "name": "Gigantamax Machamp",
     "types": [
       "fighting"
     ],
+    "gender": "male-female",
     "spriteId": 10201,
-    "baseId": 68
+    "region": "Kanto"
   },
   {
-    "formId": "kingler-gmax",
-    "name": "Gigantamax",
+    "id": 94,
+    "name": "Gigantamax Gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "gender": "male-female",
+    "spriteId": 10202,
+    "region": "Kanto"
+  },
+  {
+    "id": 99,
+    "name": "Gigantamax Kingler",
     "types": [
       "water"
     ],
+    "gender": "male-female",
     "spriteId": 10203,
-    "baseId": 99
+    "region": "Kanto"
   },
   {
-    "formId": "lapras-gmax",
-    "name": "Gigantamax",
+    "id": 131,
+    "name": "Gigantamax Lapras",
     "types": [
       "water",
       "ice"
     ],
+    "gender": "male-female",
     "spriteId": 10204,
-    "baseId": 131
+    "region": "Kanto"
   },
   {
-    "formId": "eevee-gmax",
-    "name": "Gigantamax",
+    "id": 143,
+    "name": "Gigantamax Snorlax",
     "types": [
       "normal"
     ],
-    "spriteId": 10205,
-    "baseId": 133
-  },
-  {
-    "formId": "snorlax-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "normal"
-    ],
+    "gender": "male-female",
     "spriteId": 10206,
-    "baseId": 143
+    "region": "Kanto"
   },
   {
-    "formId": "garbodor-gmax",
-    "name": "Gigantamax",
+    "id": 569,
+    "name": "Gigantamax Garbodor",
     "types": [
       "poison"
     ],
+    "gender": "male-female",
     "spriteId": 10207,
-    "baseId": 569
+    "region": "Unova"
   },
   {
-    "formId": "melmetal-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "steel"
-    ],
-    "spriteId": 10208,
-    "baseId": 809
-  },
-  {
-    "formId": "rillaboom-gmax",
-    "name": "Gigantamax",
+    "id": 812,
+    "name": "Gigantamax Rillaboom",
     "types": [
       "grass"
     ],
+    "gender": "male-female",
     "spriteId": 10209,
-    "baseId": 812
+    "region": "Galar"
   },
   {
-    "formId": "cinderace-gmax",
-    "name": "Gigantamax",
+    "id": 815,
+    "name": "Gigantamax Cinderace",
     "types": [
       "fire"
     ],
+    "gender": "male-female",
     "spriteId": 10210,
-    "baseId": 815
+    "region": "Galar"
   },
   {
-    "formId": "inteleon-gmax",
-    "name": "Gigantamax",
+    "id": 818,
+    "name": "Gigantamax Inteleon",
     "types": [
       "water"
     ],
+    "gender": "male-female",
     "spriteId": 10211,
-    "baseId": 818
+    "region": "Galar"
   },
   {
-    "formId": "corviknight-gmax",
-    "name": "Gigantamax",
+    "id": 849,
+    "name": "Gigantamax Toxtricity",
     "types": [
-      "flying",
-      "steel"
+      "electric",
+      "poison"
     ],
-    "spriteId": 10212,
-    "baseId": 823
+    "gender": "male-female",
+    "spriteId": 10219,
+    "region": "Galar"
   },
   {
-    "formId": "orbeetle-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "bug",
-      "psychic"
-    ],
-    "spriteId": 10213,
-    "baseId": 826
-  },
-  {
-    "formId": "coalossal-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "rock",
-      "fire"
-    ],
-    "spriteId": 10215,
-    "baseId": 839
-  },
-  {
-    "formId": "flapple-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "grass",
-      "dragon"
-    ],
-    "spriteId": 10216,
-    "baseId": 841
-  },
-  {
-    "formId": "appletun-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "grass",
-      "dragon"
-    ],
-    "spriteId": 10217,
-    "baseId": 842
-  },
-  {
-    "formId": "centiskorch-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "fire",
-      "bug"
-    ],
-    "spriteId": 10220,
-    "baseId": 851
-  },
-  {
-    "formId": "hatterene-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "psychic",
-      "fairy"
-    ],
-    "spriteId": 10221,
-    "baseId": 858
-  },
-  {
-    "formId": "grimmsnarl-gmax",
-    "name": "Gigantamax",
+    "id": 861,
+    "name": "Gigantamax Grimmsnarl",
     "types": [
       "dark",
       "fairy"
     ],
+    "gender": "male",
     "spriteId": 10222,
-    "baseId": 861
-  },
-  {
-    "formId": "duraludon-gmax",
-    "name": "Gigantamax",
-    "types": [
-      "steel",
-      "dragon"
-    ],
-    "spriteId": 10225,
-    "baseId": 884
+    "region": "Galar"
   }
 ]

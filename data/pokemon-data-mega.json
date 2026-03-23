@@ -1,22 +1,434 @@
 [
   {
-    "formId": "tatsugiri-droopy-mega",
-    "name": "Mega Droopy Tatsugiri",
-    "types": [
-      "dragon",
-      "water"
-    ],
-    "spriteId": 10323,
-    "baseId": 978
+    "id": 3,
+    "name": "Mega Venusaur",
+    "types": ["grass", "poison"],
+    "gender": "male-female",
+    "spriteId": 10033,
+    "region": "Kanto"
   },
   {
-    "formId": "tatsugiri-stretchy-mega",
-    "name": "Mega Stretchy Tatsugiri",
-    "types": [
-      "dragon",
-      "water"
-    ],
-    "spriteId": 10324,
-    "baseId": 978
+    "id": 6,
+    "name": "Mega Charizard X",
+    "types": ["fire", "dragon"],
+    "gender": "male-female",
+    "spriteId": 10034,
+    "region": "Kanto"
+  },
+  {
+    "id": 6,
+    "name": "Mega Charizard Y",
+    "types": ["fire", "flying"],
+    "gender": "male-female",
+    "spriteId": 10035,
+    "region": "Kanto"
+  },
+  {
+    "id": 9,
+    "name": "Mega Blastoise",
+    "types": ["water"],
+    "gender": "male-female",
+    "spriteId": 10036,
+    "region": "Kanto"
+  },
+  {
+    "id": 15,
+    "name": "Mega Beedrill",
+    "types": ["bug", "poison"],
+    "gender": "male-female",
+    "spriteId": 10090,
+    "region": "Kanto"
+  },
+  {
+    "id": 18,
+    "name": "Mega Pidgeot",
+    "types": ["normal", "flying"],
+    "gender": "male-female",
+    "spriteId": 10073,
+    "region": "Kanto"
+  },
+  {
+    "id": 65,
+    "name": "Mega Alakazam",
+    "types": ["psychic"],
+    "gender": "male-female",
+    "spriteId": 10037,
+    "region": "Kanto"
+  },
+  {
+    "id": 71,
+    "name": "Mega Victreebel",
+    "types": ["grass", "poison"],
+    "gender": "male-female",
+    "spriteId": 10279,
+    "region": "Kanto"
+  },
+  {
+    "id": 80,
+    "name": "Mega Slowbro",
+    "types": ["water", "psychic"],
+    "gender": "male-female",
+    "spriteId": 10071,
+    "region": "Kanto"
+  },
+  {
+    "id": 94,
+    "name": "Mega Gengar",
+    "types": ["ghost", "poison"],
+    "gender": "male-female",
+    "spriteId": 10038,
+    "region": "Kanto"
+  },
+  {
+    "id": 115,
+    "name": "Mega Kangaskhan",
+    "types": ["normal"],
+    "gender": "female",
+    "spriteId": 10039,
+    "region": "Kanto"
+  },
+  {
+    "id": 127,
+    "name": "Mega Pinsir",
+    "types": ["bug", "flying"],
+    "gender": "male-female",
+    "spriteId": 10040,
+    "region": "Kanto"
+  },
+  {
+    "id": 130,
+    "name": "Mega Gyarados",
+    "types": ["water", "dark"],
+    "gender": "male-female",
+    "spriteId": 10041,
+    "region": "Kanto"
+  },
+  {
+    "id": 142,
+    "name": "Mega Aerodactyl",
+    "types": ["rock", "flying"],
+    "gender": "male-female",
+    "spriteId": 10042,
+    "region": "Kanto"
+  },
+  {
+    "id": 149,
+    "name": "Mega Dragonite",
+    "types": ["dragon", "flying"],
+    "gender": "male-female",
+    "spriteId": 10281,
+    "region": "Kanto"
+  },
+  {
+    "id": 181,
+    "name": "Mega Ampharos",
+    "types": ["electric", "dragon"],
+    "gender": "male-female",
+    "spriteId": 10045,
+    "region": "Johto"
+  },
+  {
+    "id": 208,
+    "name": "Mega Steelix",
+    "types": ["steel", "ground"],
+    "gender": "male-female",
+    "spriteId": 10072,
+    "region": "Johto"
+  },
+  {
+    "id": 212,
+    "name": "Mega Scizor",
+    "types": ["bug", "steel"],
+    "gender": "male-female",
+    "spriteId": 10046,
+    "region": "Johto"
+  },
+  {
+    "id": 214,
+    "name": "Mega Heracross",
+    "types": ["bug", "fighting"],
+    "gender": "male-female",
+    "spriteId": 10047,
+    "region": "Johto"
+  },
+  {
+    "id": 229,
+    "name": "Mega Houndoom",
+    "types": ["dark", "fire"],
+    "gender": "male-female",
+    "spriteId": 10048,
+    "region": "Johto"
+  },
+  {
+    "id": 248,
+    "name": "Mega Tyranitar",
+    "types": ["rock", "dark"],
+    "gender": "male-female",
+    "spriteId": 10049,
+    "region": "Johto"
+  },
+  {
+    "id": 254,
+    "name": "Mega Sceptile",
+    "types": ["grass", "dragon"],
+    "gender": "male-female",
+    "spriteId": 10065,
+    "region": "Hoenn"
+  },
+  {
+    "id": 257,
+    "name": "Mega Blaziken",
+    "types": ["fire", "fighting"],
+    "gender": "male-female",
+    "spriteId": 10050,
+    "region": "Hoenn"
+  },
+  {
+    "id": 260,
+    "name": "Mega Swampert",
+    "types": ["water", "ground"],
+    "gender": "male-female",
+    "spriteId": 10064,
+    "region": "Hoenn"
+  },
+  {
+    "id": 282,
+    "name": "Mega Gardevoir",
+    "types": ["psychic", "fairy"],
+    "gender": "male-female",
+    "spriteId": 10051,
+    "region": "Hoenn"
+  },
+  {
+    "id": 302,
+    "name": "Mega Sableye",
+    "types": ["dark", "ghost"],
+    "gender": "male-female",
+    "spriteId": 10066,
+    "region": "Hoenn"
+  },
+  {
+    "id": 303,
+    "name": "Mega Mawile",
+    "types": ["steel", "fairy"],
+    "gender": "male-female",
+    "spriteId": 10052,
+    "region": "Hoenn"
+  },
+  {
+    "id": 306,
+    "name": "Mega Aggron",
+    "types": ["steel"],
+    "gender": "male-female",
+    "spriteId": 10053,
+    "region": "Hoenn"
+  },
+  {
+    "id": 308,
+    "name": "Mega Medicham",
+    "types": ["fighting", "psychic"],
+    "gender": "male-female",
+    "spriteId": 10054,
+    "region": "Hoenn"
+  },
+  {
+    "id": 310,
+    "name": "Mega Manectric",
+    "types": ["electric"],
+    "gender": "male-female",
+    "spriteId": 10055,
+    "region": "Hoenn"
+  },
+  {
+    "id": 319,
+    "name": "Mega Sharpedo",
+    "types": ["water", "dark"],
+    "gender": "male-female",
+    "spriteId": 10070,
+    "region": "Hoenn"
+  },
+  {
+    "id": 323,
+    "name": "Mega Camerupt",
+    "types": ["fire", "ground"],
+    "gender": "male-female",
+    "spriteId": 10087,
+    "region": "Hoenn"
+  },
+  {
+    "id": 334,
+    "name": "Mega Altaria",
+    "types": ["dragon", "fairy"],
+    "gender": "male-female",
+    "spriteId": 10067,
+    "region": "Hoenn"
+  },
+  {
+    "id": 354,
+    "name": "Mega Banette",
+    "types": ["ghost"],
+    "gender": "male-female",
+    "spriteId": 10056,
+    "region": "Hoenn"
+  },
+  {
+    "id": 359,
+    "name": "Mega Absol",
+    "types": ["dark"],
+    "gender": "male-female",
+    "spriteId": 10057,
+    "region": "Hoenn"
+  },
+  {
+    "id": 359,
+    "name": "Mega Absol Z",
+    "types": ["dark", "ghost"],
+    "gender": "male-female",
+    "spriteId": 10307,
+    "region": "Hoenn"
+  },
+  {
+    "id": 362,
+    "name": "Mega Glalie",
+    "types": ["ice"],
+    "gender": "male-female",
+    "spriteId": 10074,
+    "region": "Hoenn"
+  },
+  {
+    "id": 373,
+    "name": "Mega Salamence",
+    "types": ["dragon", "flying"],
+    "gender": "male-female",
+    "spriteId": 10089,
+    "region": "Hoenn"
+  },
+  {
+    "id": 376,
+    "name": "Mega Metagross",
+    "types": ["steel", "psychic"],
+    "gender": "none",
+    "spriteId": 10076,
+    "region": "Hoenn"
+  },
+  {
+    "id": 380,
+    "name": "Mega Latias",
+    "types": ["dragon", "psychic"],
+    "gender": "female",
+    "spriteId": 10062,
+    "region": "Hoenn"
+  },
+  {
+    "id": 381,
+    "name": "Mega Latios",
+    "types": ["dragon", "psychic"],
+    "gender": "male",
+    "spriteId": 10063,
+    "region": "Hoenn"
+  },
+  {
+    "id": 382,
+    "name": "Primal Kyogre",
+    "types": ["water"],
+    "gender": "none",
+    "spriteId": 10077,
+    "region": "Hoenn"
+  },
+  {
+    "id": 383,
+    "name": "Primal Groudon",
+    "types": ["ground", "fire"],
+    "gender": "none",
+    "spriteId": 10078,
+    "region": "Hoenn"
+  },
+  {
+    "id": 384,
+    "name": "Mega Rayquaza",
+    "types": ["dragon", "flying"],
+    "gender": "none",
+    "spriteId": 10079,
+    "region": "Hoenn"
+  },
+  {
+    "id": 428,
+    "name": "Mega Lopunny",
+    "types": ["normal", "fighting"],
+    "gender": "male-female",
+    "spriteId": 10088,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 445,
+    "name": "Mega Garchomp",
+    "types": ["dragon", "ground"],
+    "gender": "male-female",
+    "spriteId": 10058,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 445,
+    "name": "Mega Garchomp Z",
+    "types": ["dragon"],
+    "gender": "male-female",
+    "spriteId": 10309,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 448,
+    "name": "Mega Lucario",
+    "types": ["fighting", "steel"],
+    "gender": "male-female",
+    "spriteId": 10059,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 448,
+    "name": "Mega Lucario Z",
+    "types": ["fighting", "steel"],
+    "gender": "male-female",
+    "spriteId": 10310,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 460,
+    "name": "Mega Abomasnow",
+    "types": ["grass", "ice"],
+    "gender": "male-female",
+    "spriteId": 10060,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 475,
+    "name": "Mega Gallade",
+    "types": ["psychic", "fighting"],
+    "gender": "male",
+    "spriteId": 10068,
+    "region": "Sinnoh"
+  },
+  {
+    "id": 531,
+    "name": "Mega Audino",
+    "types": ["normal", "fairy"],
+    "gender": "male-female",
+    "spriteId": 10069,
+    "region": "Unova"
+  },
+  {
+    "id": 687,
+    "name": "Mega Malamar",
+    "types": ["dark", "psychic"],
+    "gender": "male-female",
+    "spriteId": 10297,
+    "region": "Kalos"
+  },
+  {
+    "id": 719,
+    "name": "Mega Diancie",
+    "types": ["rock", "fairy"],
+    "gender": "none",
+    "spriteId": 10075,
+    "region": "Kalos"
   }
 ]
