@@ -2,7 +2,10 @@
   {
     "id": 3,
     "name": "Mega Venusaur",
-    "types": ["grass", "poison"],
+    "types": [
+      "grass",
+      "poison"
+    ],
     "gender": "male-female",
     "spriteId": 10033,
     "region": "Kanto"
@@ -10,7 +13,10 @@
   {
     "id": 6,
     "name": "Mega Charizard X",
-    "types": ["fire", "dragon"],
+    "types": [
+      "fire",
+      "dragon"
+    ],
     "gender": "male-female",
     "spriteId": 10034,
     "region": "Kanto"
@@ -18,7 +24,10 @@
   {
     "id": 6,
     "name": "Mega Charizard Y",
-    "types": ["fire", "flying"],
+    "types": [
+      "fire",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10035,
     "region": "Kanto"
@@ -26,7 +35,9 @@
   {
     "id": 9,
     "name": "Mega Blastoise",
-    "types": ["water"],
+    "types": [
+      "water"
+    ],
     "gender": "male-female",
     "spriteId": 10036,
     "region": "Kanto"
@@ -34,7 +45,10 @@
   {
     "id": 15,
     "name": "Mega Beedrill",
-    "types": ["bug", "poison"],
+    "types": [
+      "bug",
+      "poison"
+    ],
     "gender": "male-female",
     "spriteId": 10090,
     "region": "Kanto"
@@ -42,15 +56,40 @@
   {
     "id": 18,
     "name": "Mega Pidgeot",
-    "types": ["normal", "flying"],
+    "types": [
+      "normal",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10073,
     "region": "Kanto"
   },
   {
+    "id": 26,
+    "name": "Mega Raichu X",
+    "types": [
+      "electric"
+    ],
+    "gender": "male-female",
+    "spriteId": 10304,
+    "region": "Kanto"
+  },
+  {
+    "id": 26,
+    "name": "Mega Raichu Y",
+    "types": [
+      "electric"
+    ],
+    "gender": "male-female",
+    "spriteId": 10305,
+    "region": "Kanto"
+  },
+  {
     "id": 65,
     "name": "Mega Alakazam",
-    "types": ["psychic"],
+    "types": [
+      "psychic"
+    ],
     "gender": "male-female",
     "spriteId": 10037,
     "region": "Kanto"
@@ -58,7 +97,10 @@
   {
     "id": 71,
     "name": "Mega Victreebel",
-    "types": ["grass", "poison"],
+    "types": [
+      "grass",
+      "poison"
+    ],
     "gender": "male-female",
     "spriteId": 10279,
     "region": "Kanto"
@@ -66,7 +108,10 @@
   {
     "id": 80,
     "name": "Mega Slowbro",
-    "types": ["water", "psychic"],
+    "types": [
+      "water",
+      "psychic"
+    ],
     "gender": "male-female",
     "spriteId": 10071,
     "region": "Kanto"
@@ -74,7 +119,10 @@
   {
     "id": 94,
     "name": "Mega Gengar",
-    "types": ["ghost", "poison"],
+    "types": [
+      "ghost",
+      "poison"
+    ],
     "gender": "male-female",
     "spriteId": 10038,
     "region": "Kanto"
@@ -82,7 +130,9 @@
   {
     "id": 115,
     "name": "Mega Kangaskhan",
-    "types": ["normal"],
+    "types": [
+      "normal"
+    ],
     "gender": "female",
     "spriteId": 10039,
     "region": "Kanto"
@@ -90,7 +140,10 @@
   {
     "id": 127,
     "name": "Mega Pinsir",
-    "types": ["bug", "flying"],
+    "types": [
+      "bug",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10040,
     "region": "Kanto"
@@ -98,7 +151,10 @@
   {
     "id": 130,
     "name": "Mega Gyarados",
-    "types": ["water", "dark"],
+    "types": [
+      "water",
+      "dark"
+    ],
     "gender": "male-female",
     "spriteId": 10041,
     "region": "Kanto"
@@ -106,7 +162,10 @@
   {
     "id": 142,
     "name": "Mega Aerodactyl",
-    "types": ["rock", "flying"],
+    "types": [
+      "rock",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10042,
     "region": "Kanto"
@@ -114,15 +173,42 @@
   {
     "id": 149,
     "name": "Mega Dragonite",
-    "types": ["dragon", "flying"],
+    "types": [
+      "dragon",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10281,
     "region": "Kanto"
   },
   {
+    "id": 150,
+    "name": "Mega Mewtwo X",
+    "types": [
+      "psychic",
+      "fighting"
+    ],
+    "gender": "none",
+    "spriteId": 10043,
+    "region": "Kanto"
+  },
+  {
+    "id": 150,
+    "name": "Mega Mewtwo Y",
+    "types": [
+      "psychic"
+    ],
+    "gender": "none",
+    "spriteId": 10044,
+    "region": "Kanto"
+  },
+  {
     "id": 181,
     "name": "Mega Ampharos",
-    "types": ["electric", "dragon"],
+    "types": [
+      "electric",
+      "dragon"
+    ],
     "gender": "male-female",
     "spriteId": 10045,
     "region": "Johto"
@@ -130,7 +216,10 @@
   {
     "id": 208,
     "name": "Mega Steelix",
-    "types": ["steel", "ground"],
+    "types": [
+      "steel",
+      "ground"
+    ],
     "gender": "male-female",
     "spriteId": 10072,
     "region": "Johto"
@@ -138,7 +227,10 @@
   {
     "id": 212,
     "name": "Mega Scizor",
-    "types": ["bug", "steel"],
+    "types": [
+      "bug",
+      "steel"
+    ],
     "gender": "male-female",
     "spriteId": 10046,
     "region": "Johto"
@@ -146,15 +238,32 @@
   {
     "id": 214,
     "name": "Mega Heracross",
-    "types": ["bug", "fighting"],
+    "types": [
+      "bug",
+      "fighting"
+    ],
     "gender": "male-female",
     "spriteId": 10047,
     "region": "Johto"
   },
   {
+    "id": 227,
+    "name": "Mega Skarmory",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "gender": "male-female",
+    "spriteId": 10284,
+    "region": "Johto"
+  },
+  {
     "id": 229,
     "name": "Mega Houndoom",
-    "types": ["dark", "fire"],
+    "types": [
+      "dark",
+      "fire"
+    ],
     "gender": "male-female",
     "spriteId": 10048,
     "region": "Johto"
@@ -162,7 +271,10 @@
   {
     "id": 248,
     "name": "Mega Tyranitar",
-    "types": ["rock", "dark"],
+    "types": [
+      "rock",
+      "dark"
+    ],
     "gender": "male-female",
     "spriteId": 10049,
     "region": "Johto"
@@ -170,7 +282,10 @@
   {
     "id": 254,
     "name": "Mega Sceptile",
-    "types": ["grass", "dragon"],
+    "types": [
+      "grass",
+      "dragon"
+    ],
     "gender": "male-female",
     "spriteId": 10065,
     "region": "Hoenn"
@@ -178,7 +293,10 @@
   {
     "id": 257,
     "name": "Mega Blaziken",
-    "types": ["fire", "fighting"],
+    "types": [
+      "fire",
+      "fighting"
+    ],
     "gender": "male-female",
     "spriteId": 10050,
     "region": "Hoenn"
@@ -186,7 +304,10 @@
   {
     "id": 260,
     "name": "Mega Swampert",
-    "types": ["water", "ground"],
+    "types": [
+      "water",
+      "ground"
+    ],
     "gender": "male-female",
     "spriteId": 10064,
     "region": "Hoenn"
@@ -194,7 +315,10 @@
   {
     "id": 282,
     "name": "Mega Gardevoir",
-    "types": ["psychic", "fairy"],
+    "types": [
+      "psychic",
+      "fairy"
+    ],
     "gender": "male-female",
     "spriteId": 10051,
     "region": "Hoenn"
@@ -202,7 +326,10 @@
   {
     "id": 302,
     "name": "Mega Sableye",
-    "types": ["dark", "ghost"],
+    "types": [
+      "dark",
+      "ghost"
+    ],
     "gender": "male-female",
     "spriteId": 10066,
     "region": "Hoenn"
@@ -210,7 +337,10 @@
   {
     "id": 303,
     "name": "Mega Mawile",
-    "types": ["steel", "fairy"],
+    "types": [
+      "steel",
+      "fairy"
+    ],
     "gender": "male-female",
     "spriteId": 10052,
     "region": "Hoenn"
@@ -218,7 +348,9 @@
   {
     "id": 306,
     "name": "Mega Aggron",
-    "types": ["steel"],
+    "types": [
+      "steel"
+    ],
     "gender": "male-female",
     "spriteId": 10053,
     "region": "Hoenn"
@@ -226,7 +358,10 @@
   {
     "id": 308,
     "name": "Mega Medicham",
-    "types": ["fighting", "psychic"],
+    "types": [
+      "fighting",
+      "psychic"
+    ],
     "gender": "male-female",
     "spriteId": 10054,
     "region": "Hoenn"
@@ -234,7 +369,9 @@
   {
     "id": 310,
     "name": "Mega Manectric",
-    "types": ["electric"],
+    "types": [
+      "electric"
+    ],
     "gender": "male-female",
     "spriteId": 10055,
     "region": "Hoenn"
@@ -242,7 +379,10 @@
   {
     "id": 319,
     "name": "Mega Sharpedo",
-    "types": ["water", "dark"],
+    "types": [
+      "water",
+      "dark"
+    ],
     "gender": "male-female",
     "spriteId": 10070,
     "region": "Hoenn"
@@ -250,7 +390,10 @@
   {
     "id": 323,
     "name": "Mega Camerupt",
-    "types": ["fire", "ground"],
+    "types": [
+      "fire",
+      "ground"
+    ],
     "gender": "male-female",
     "spriteId": 10087,
     "region": "Hoenn"
@@ -258,7 +401,10 @@
   {
     "id": 334,
     "name": "Mega Altaria",
-    "types": ["dragon", "fairy"],
+    "types": [
+      "dragon",
+      "fairy"
+    ],
     "gender": "male-female",
     "spriteId": 10067,
     "region": "Hoenn"
@@ -266,7 +412,9 @@
   {
     "id": 354,
     "name": "Mega Banette",
-    "types": ["ghost"],
+    "types": [
+      "ghost"
+    ],
     "gender": "male-female",
     "spriteId": 10056,
     "region": "Hoenn"
@@ -274,7 +422,9 @@
   {
     "id": 359,
     "name": "Mega Absol",
-    "types": ["dark"],
+    "types": [
+      "dark"
+    ],
     "gender": "male-female",
     "spriteId": 10057,
     "region": "Hoenn"
@@ -282,7 +432,10 @@
   {
     "id": 359,
     "name": "Mega Absol Z",
-    "types": ["dark", "ghost"],
+    "types": [
+      "dark",
+      "ghost"
+    ],
     "gender": "male-female",
     "spriteId": 10307,
     "region": "Hoenn"
@@ -290,7 +443,9 @@
   {
     "id": 362,
     "name": "Mega Glalie",
-    "types": ["ice"],
+    "types": [
+      "ice"
+    ],
     "gender": "male-female",
     "spriteId": 10074,
     "region": "Hoenn"
@@ -298,7 +453,10 @@
   {
     "id": 373,
     "name": "Mega Salamence",
-    "types": ["dragon", "flying"],
+    "types": [
+      "dragon",
+      "flying"
+    ],
     "gender": "male-female",
     "spriteId": 10089,
     "region": "Hoenn"
@@ -306,7 +464,10 @@
   {
     "id": 376,
     "name": "Mega Metagross",
-    "types": ["steel", "psychic"],
+    "types": [
+      "steel",
+      "psychic"
+    ],
     "gender": "none",
     "spriteId": 10076,
     "region": "Hoenn"
@@ -314,7 +475,10 @@
   {
     "id": 380,
     "name": "Mega Latias",
-    "types": ["dragon", "psychic"],
+    "types": [
+      "dragon",
+      "psychic"
+    ],
     "gender": "female",
     "spriteId": 10062,
     "region": "Hoenn"
@@ -322,7 +486,10 @@
   {
     "id": 381,
     "name": "Mega Latios",
-    "types": ["dragon", "psychic"],
+    "types": [
+      "dragon",
+      "psychic"
+    ],
     "gender": "male",
     "spriteId": 10063,
     "region": "Hoenn"
@@ -330,7 +497,9 @@
   {
     "id": 382,
     "name": "Primal Kyogre",
-    "types": ["water"],
+    "types": [
+      "water"
+    ],
     "gender": "none",
     "spriteId": 10077,
     "region": "Hoenn"
@@ -338,7 +507,10 @@
   {
     "id": 383,
     "name": "Primal Groudon",
-    "types": ["ground", "fire"],
+    "types": [
+      "ground",
+      "fire"
+    ],
     "gender": "none",
     "spriteId": 10078,
     "region": "Hoenn"
@@ -346,7 +518,10 @@
   {
     "id": 384,
     "name": "Mega Rayquaza",
-    "types": ["dragon", "flying"],
+    "types": [
+      "dragon",
+      "flying"
+    ],
     "gender": "none",
     "spriteId": 10079,
     "region": "Hoenn"
@@ -354,7 +529,10 @@
   {
     "id": 428,
     "name": "Mega Lopunny",
-    "types": ["normal", "fighting"],
+    "types": [
+      "normal",
+      "fighting"
+    ],
     "gender": "male-female",
     "spriteId": 10088,
     "region": "Sinnoh"
@@ -362,7 +540,10 @@
   {
     "id": 445,
     "name": "Mega Garchomp",
-    "types": ["dragon", "ground"],
+    "types": [
+      "dragon",
+      "ground"
+    ],
     "gender": "male-female",
     "spriteId": 10058,
     "region": "Sinnoh"
@@ -370,7 +551,9 @@
   {
     "id": 445,
     "name": "Mega Garchomp Z",
-    "types": ["dragon"],
+    "types": [
+      "dragon"
+    ],
     "gender": "male-female",
     "spriteId": 10309,
     "region": "Sinnoh"
@@ -378,7 +561,10 @@
   {
     "id": 448,
     "name": "Mega Lucario",
-    "types": ["fighting", "steel"],
+    "types": [
+      "fighting",
+      "steel"
+    ],
     "gender": "male-female",
     "spriteId": 10059,
     "region": "Sinnoh"
@@ -386,7 +572,10 @@
   {
     "id": 448,
     "name": "Mega Lucario Z",
-    "types": ["fighting", "steel"],
+    "types": [
+      "fighting",
+      "steel"
+    ],
     "gender": "male-female",
     "spriteId": 10310,
     "region": "Sinnoh"
@@ -394,7 +583,10 @@
   {
     "id": 460,
     "name": "Mega Abomasnow",
-    "types": ["grass", "ice"],
+    "types": [
+      "grass",
+      "ice"
+    ],
     "gender": "male-female",
     "spriteId": 10060,
     "region": "Sinnoh"
@@ -402,7 +594,10 @@
   {
     "id": 475,
     "name": "Mega Gallade",
-    "types": ["psychic", "fighting"],
+    "types": [
+      "psychic",
+      "fighting"
+    ],
     "gender": "male",
     "spriteId": 10068,
     "region": "Sinnoh"
@@ -410,7 +605,10 @@
   {
     "id": 531,
     "name": "Mega Audino",
-    "types": ["normal", "fairy"],
+    "types": [
+      "normal",
+      "fairy"
+    ],
     "gender": "male-female",
     "spriteId": 10069,
     "region": "Unova"
@@ -418,7 +616,10 @@
   {
     "id": 687,
     "name": "Mega Malamar",
-    "types": ["dark", "psychic"],
+    "types": [
+      "dark",
+      "psychic"
+    ],
     "gender": "male-female",
     "spriteId": 10297,
     "region": "Kalos"
@@ -426,9 +627,22 @@
   {
     "id": 719,
     "name": "Mega Diancie",
-    "types": ["rock", "fairy"],
+    "types": [
+      "rock",
+      "fairy"
+    ],
     "gender": "none",
     "spriteId": 10075,
     "region": "Kalos"
+  },
+  {
+    "id": 870,
+    "name": "Mega Falinks",
+    "types": [
+      "fighting"
+    ],
+    "gender": "none",
+    "spriteId": 10303,
+    "region": "Galar"
   }
 ]

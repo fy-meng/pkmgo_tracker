@@ -2,10 +2,7 @@
   {
     "id": 3,
     "name": "Gigantamax Venusaur",
-    "types": [
-      "grass",
-      "poison"
-    ],
+    "types": ["grass", "poison"],
     "gender": "male-female",
     "spriteId": 10195,
     "region": "Kanto"
@@ -13,10 +10,7 @@
   {
     "id": 6,
     "name": "Gigantamax Charizard",
-    "types": [
-      "fire",
-      "flying"
-    ],
+    "types": ["fire", "flying"],
     "gender": "male-female",
     "spriteId": 10196,
     "region": "Kanto"
@@ -24,9 +18,7 @@
   {
     "id": 9,
     "name": "Gigantamax Blastoise",
-    "types": [
-      "water"
-    ],
+    "types": ["water"],
     "gender": "male-female",
     "spriteId": 10197,
     "region": "Kanto"
@@ -34,10 +26,7 @@
   {
     "id": 12,
     "name": "Gigantamax Butterfree",
-    "types": [
-      "bug",
-      "flying"
-    ],
+    "types": ["bug", "flying"],
     "gender": "male-female",
     "spriteId": 10198,
     "region": "Kanto"
@@ -45,9 +34,7 @@
   {
     "id": 25,
     "name": "Gigantamax Pikachu",
-    "types": [
-      "electric"
-    ],
+    "types": ["electric"],
     "gender": "male-female",
     "spriteId": 10199,
     "region": "Kanto"
@@ -55,9 +42,7 @@
   {
     "id": 52,
     "name": "Gigantamax Meowth",
-    "types": [
-      "normal"
-    ],
+    "types": ["normal"],
     "gender": "male-female",
     "spriteId": 10200,
     "region": "Kanto"
@@ -65,9 +50,7 @@
   {
     "id": 68,
     "name": "Gigantamax Machamp",
-    "types": [
-      "fighting"
-    ],
+    "types": ["fighting"],
     "gender": "male-female",
     "spriteId": 10201,
     "region": "Kanto"
@@ -75,10 +58,7 @@
   {
     "id": 94,
     "name": "Gigantamax Gengar",
-    "types": [
-      "ghost",
-      "poison"
-    ],
+    "types": ["ghost", "poison"],
     "gender": "male-female",
     "spriteId": 10202,
     "region": "Kanto"
@@ -86,9 +66,7 @@
   {
     "id": 99,
     "name": "Gigantamax Kingler",
-    "types": [
-      "water"
-    ],
+    "types": ["water"],
     "gender": "male-female",
     "spriteId": 10203,
     "region": "Kanto"
@@ -96,10 +74,7 @@
   {
     "id": 131,
     "name": "Gigantamax Lapras",
-    "types": [
-      "water",
-      "ice"
-    ],
+    "types": ["water", "ice"],
     "gender": "male-female",
     "spriteId": 10204,
     "region": "Kanto"
@@ -107,9 +82,7 @@
   {
     "id": 143,
     "name": "Gigantamax Snorlax",
-    "types": [
-      "normal"
-    ],
+    "types": ["normal"],
     "gender": "male-female",
     "spriteId": 10206,
     "region": "Kanto"
@@ -117,9 +90,7 @@
   {
     "id": 569,
     "name": "Gigantamax Garbodor",
-    "types": [
-      "poison"
-    ],
+    "types": ["poison"],
     "gender": "male-female",
     "spriteId": 10207,
     "region": "Unova"
@@ -127,9 +98,7 @@
   {
     "id": 812,
     "name": "Gigantamax Rillaboom",
-    "types": [
-      "grass"
-    ],
+    "types": ["grass"],
     "gender": "male-female",
     "spriteId": 10209,
     "region": "Galar"
@@ -137,9 +106,7 @@
   {
     "id": 815,
     "name": "Gigantamax Cinderace",
-    "types": [
-      "fire"
-    ],
+    "types": ["fire"],
     "gender": "male-female",
     "spriteId": 10210,
     "region": "Galar"
@@ -147,9 +114,7 @@
   {
     "id": 818,
     "name": "Gigantamax Inteleon",
-    "types": [
-      "water"
-    ],
+    "types": ["water"],
     "gender": "male-female",
     "spriteId": 10211,
     "region": "Galar"
@@ -157,10 +122,7 @@
   {
     "id": 849,
     "name": "Gigantamax Toxtricity",
-    "types": [
-      "electric",
-      "poison"
-    ],
+    "types": ["electric", "poison"],
     "gender": "male-female",
     "spriteId": 10219,
     "region": "Galar"
@@ -168,10 +130,7 @@
   {
     "id": 861,
     "name": "Gigantamax Grimmsnarl",
-    "types": [
-      "dark",
-      "fairy"
-    ],
+    "types": ["dark", "fairy"],
     "gender": "male",
     "spriteId": 10222,
     "region": "Galar"
