@@ -3,6 +3,12 @@ function spriteUrl(id) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
+// ── Row controllers ───────────────────────────────────────────────
+// Each rendered row registers { setAll, isAllChecked } here so region
+// banners can drive every row they contain. Rebuilt on each renderTable().
+const rowControllers = {};
+const regionControllers = [];
+
 // ── Collect button ────────────────────────────────────────────────
 function makeCollectBtn(key, onToggle) {
   const btn = document.createElement("button");
@@ -182,11 +188,23 @@ function renderRow(p) {
   checkAllBtn.className = "row-check-all-btn";
   checkAllBtn.title = "Check all boxes for this Pokémon";
 
+  // Only the gender slots this Pokémon actually has. initState() always creates
+  // all five keys, so testing key presence would keep `genderless` on gendered
+  // Pokémon (which nothing ever sets) and make isAllChecked() permanently false.
+  const genderKeys =
+    gender === "none"
+      ? ["genderless"]
+      : ["male", "female"].filter(
+          (g) => gender === "male-female" || gender === g,
+        );
+
   function isAllChecked() {
-    const ks = ["male", "female", "genderless", "lucky", "shiny"].filter(
-      (k) => k in state[key],
+    const ks = [...genderKeys, "lucky", "shiny"];
+    return (
+      state[key].collected &&
+      ks.every((k) => state[key][k]) &&
+      (p.forms || []).every((f) => state[f.formId].collected)
     );
-    return state[key].collected && ks.every((k) => state[key][k]);
   }
 
   function syncCheckAllBtn() {
@@ -209,27 +227,19 @@ function renderRow(p) {
     });
   }
 
-  checkAllBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const newVal = !isAllChecked();
-
+  // Set every box on this row (and its forms) to newVal.
+  function setAll(newVal) {
     state[key].collected = newVal;
     tr.className = newVal ? "collected" : "";
     collectBtn.className = "collect-btn" + (newVal ? " active" : "");
 
-    if (gender === "none") {
-      state[key].genderless = newVal;
-      const gb = genderTd.querySelector(".gender-btn");
+    genderKeys.forEach((g) => {
+      state[key][g] = newVal;
+      const sel =
+        g === "genderless" ? ".gender-btn" : `.gender-btn[data-gender="${g}"]`;
+      const gb = genderTd.querySelector(sel);
       if (gb) gb.className = "gender-btn" + (newVal ? " active" : "");
-    } else {
-      ["male", "female"]
-        .filter((g) => gender === "male-female" || gender === g)
-        .forEach((g) => {
-          state[key][g] = newVal;
-          const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
-          if (gb) gb.className = "gender-btn" + (newVal ? " active" : "");
-        });
-    }
+    });
 
     state[key].lucky = newVal;
     luckyBtn.className = "toggle-btn lucky" + (newVal ? " active" : "");
@@ -238,6 +248,13 @@ function renderRow(p) {
 
     setFormStates(newVal);
     syncCheckAllBtn();
+  }
+
+  rowControllers[key] = { setAll, isAllChecked };
+
+  checkAllBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setAll(!isAllChecked());
     updateStats();
   });
   checkAllTd.appendChild(checkAllBtn);
@@ -250,32 +267,7 @@ function renderRow(p) {
   removeAllBtn.title = "Clear all boxes for this Pokémon";
   removeAllBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-
-    state[key].collected = false;
-    tr.className = "";
-    collectBtn.className = "collect-btn";
-
-    if (gender === "none") {
-      state[key].genderless = false;
-      const gb = genderTd.querySelector(".gender-btn");
-      if (gb) gb.className = "gender-btn";
-    } else {
-      ["male", "female"]
-        .filter((g) => gender === "male-female" || gender === g)
-        .forEach((g) => {
-          state[key][g] = false;
-          const gb = genderTd.querySelector(`.gender-btn[data-gender="${g}"]`);
-          if (gb) gb.className = "gender-btn";
-        });
-    }
-
-    state[key].lucky = false;
-    luckyBtn.className = "toggle-btn lucky";
-    state[key].shiny = false;
-    shinyBtn.className = "toggle-btn shiny";
-
-    setFormStates(false);
-    syncCheckAllBtn();
+    setAll(false);
     updateStats();
   });
   removeAllTd.appendChild(removeAllBtn);
@@ -408,6 +400,7 @@ function updateStats() {
   document.getElementById("progress-fill").style.width =
     total > 0 ? `${(collected / total) * 100}%` : "0%";
 
+  syncRegionBtns();
   saveCookie();
 }
 
@@ -424,7 +417,7 @@ const REGION_COLORS = {
   Paldea: "#c2255c",
 };
 
-function renderRegionSeparator(region, count) {
+function renderRegionSeparator(region, keys) {
   const tr = document.createElement("tr");
   tr.className = "region-separator";
   tr.id = `region-${region.toLowerCase()}`;
@@ -435,10 +428,49 @@ function renderRegionSeparator(region, count) {
     <div class="region-banner" style="--region-color:${color}">
       <span class="region-banner-name">${region}</span>
       <div class="region-banner-line"></div>
-      <span class="region-banner-count">${count} Pokémon</span>
+      <span class="region-banner-count">${keys.length} Pokémon</span>
     </div>`;
+
+  const btn = document.createElement("button");
+  btn.className = "region-check-all-btn";
+
+  // All rows in the region are registered before updateStats() runs, so the
+  // banner can always read their live state.
+  const isRegionChecked = () =>
+    keys.every((k) => rowControllers[k]?.isAllChecked());
+
+  function sync() {
+    const allDone = isRegionChecked();
+    btn.textContent = allDone ? "✓ All checked" : "+ Check all";
+    btn.title = allDone
+      ? `Clear every box in ${region}`
+      : `Check every box in ${region}`;
+    btn.classList.toggle("all-checked", allDone);
+  }
+  sync();
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const newVal = !isRegionChecked();
+    // Clearing a whole region wipes a lot of progress — confirm first.
+    if (
+      !newVal &&
+      !confirm(`Clear every box for all ${keys.length} Pokémon in ${region}?`)
+    )
+      return;
+    keys.forEach((k) => rowControllers[k]?.setAll(newVal));
+    updateStats();
+  });
+
+  td.querySelector(".region-banner").appendChild(btn);
+  regionControllers.push({ sync });
+
   tr.appendChild(td);
   return tr;
+}
+
+function syncRegionBtns() {
+  regionControllers.forEach((r) => r.sync());
 }
 
 // ── TOC sidebar ───────────────────────────────────────────────────
@@ -480,16 +512,18 @@ function buildTOC(regions) {
 function renderTable() {
   const tbody = document.getElementById("pokemon-tbody");
   tbody.innerHTML = "";
+  Object.keys(rowControllers).forEach((k) => delete rowControllers[k]);
+  regionControllers.length = 0;
 
   const regionOrder = [];
-  const regionCounts = {};
+  const regionKeys = {};
   POKEMON.forEach((p) => {
     const r = p.region || "Unknown";
-    if (!regionCounts[r]) {
-      regionCounts[r] = 0;
+    if (!regionKeys[r]) {
+      regionKeys[r] = [];
       regionOrder.push(r);
     }
-    regionCounts[r]++;
+    regionKeys[r].push(p.formId || p.id);
   });
 
   let currentRegion = null;
@@ -497,12 +531,14 @@ function renderTable() {
     const r = p.region || "Unknown";
     if (r !== currentRegion) {
       currentRegion = r;
-      tbody.appendChild(renderRegionSeparator(r, regionCounts[r]));
+      tbody.appendChild(renderRegionSeparator(r, regionKeys[r]));
     }
     initState(p);
     tbody.appendChild(renderRow(p));
   });
 
-  buildTOC(regionOrder.map((name) => ({ name, count: regionCounts[name] })));
+  buildTOC(
+    regionOrder.map((name) => ({ name, count: regionKeys[name].length })),
+  );
   updateStats();
 }

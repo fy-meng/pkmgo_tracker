@@ -535,3 +535,31 @@ tr.region-separator:hover {
   font-weight: 700;
   color: var(--text-dim);
 }
+
+.region-check-all-btn {
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.region-check-all-btn:hover {
+  background: color-mix(in srgb, var(--region-color) 14%, transparent);
+  border-color: var(--region-color);
+  color: var(--region-color);
+}
+
+.region-check-all-btn.all-checked {
+  background: rgba(81, 207, 102, 0.12);
+  border-color: var(--collected);
+  color: var(--collected);
+}
