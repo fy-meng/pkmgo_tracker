@@ -50,6 +50,12 @@ SEREBII_INDEX = f"{SEREBII_BASE}/pokemon.shtml"
 OUTPUT_FILE   = "data/pokemon-data.json"
 
 FORM_BLACKLIST: list[str] = [
+    "totem",
+    "gigantamax",
+    "mega",
+    "mega x",
+    "mega y",
+    "mega z",
     "rock star",
     "pop star",
     "libre",
@@ -66,6 +72,7 @@ FORM_BLACKLIST: list[str] = [
     "own tempo",
     "full belly",
     "hangry",
+    "busted",
 ]
 
 # ---------------------------------------------------------------------------
