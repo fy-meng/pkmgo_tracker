@@ -8,7 +8,8 @@ function setTrainerDisplay(id) {
 function switchToUser(userId) {
   saveUserId(userId);
   setTrainerDisplay(userId);
-  _cookieData = loadCookieForUser(userId);
+  resetState();
+  _savedData = loadDataForUser(userId);
   renderTable();
 }
 

@@ -1,9 +1,9 @@
 // ── Lucky data queries ────────────────────────────────────────────
 function getLuckyIdsForUser(uid) {
-  const data = loadCookieForUser(uid);
+  const data = loadDataForUser(uid);
   const luckyIds = new Set();
   POKEMON.forEach((p) => {
-    const entry = data[p.id] || {};
+    const entry = data[stateKey(p)] || {};
     if (entry.l) luckyIds.add(p.id);
   });
   return luckyIds;

@@ -1,9 +1,35 @@
-// ── Cookie primitives ─────────────────────────────────────────────
-function setCookie(name, value, days = 365) {
-  const exp = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${exp}; path=/; SameSite=Lax`;
+// ── Storage primitives ────────────────────────────────────────────
+// Data lives in localStorage. Cookies capped a full collection at ~44
+// Pokémon: the 4KB-per-cookie limit, hit early because encodeURIComponent
+// inflates every {, } and " to three bytes. Over the cap the browser
+// silently drops the write, so progress just stopped saving.
+
+function readStore(name) {
+  try {
+    return localStorage.getItem(name);
+  } catch {
+    return null;
+  }
 }
 
+function writeStore(name, value) {
+  try {
+    localStorage.setItem(name, value);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function removeStore(name) {
+  try {
+    localStorage.removeItem(name);
+  } catch {
+    /* storage unavailable */
+  }
+}
+
+// ── Cookie primitives (legacy reads + migration only) ─────────────
 function getCookie(name) {
   const match = document.cookie
     .split("; ")
@@ -27,18 +53,18 @@ function deleteCookie(name) {
 
 function loadAllUsers() {
   try {
-    return JSON.parse(getCookie("pokedex_users") || "[]");
+    return JSON.parse(readStore("pokedex_users") || "[]");
   } catch {
     return [];
   }
 }
 
 function saveAllUsers(users) {
-  setCookie("pokedex_users", JSON.stringify([...new Set(users)]));
+  writeStore("pokedex_users", JSON.stringify([...new Set(users)]));
 }
 
 function saveUserId(id) {
-  setCookie("pokedex_user", id);
+  writeStore("pokedex_user", id);
   const users = loadAllUsers();
   if (!users.includes(id)) {
     users.push(id);
@@ -47,12 +73,16 @@ function saveUserId(id) {
 }
 
 function loadUserId() {
-  return getCookie("pokedex_user") || null;
+  return readStore("pokedex_user") || null;
 }
 
 // ── Per-user collection data ──────────────────────────────────────
-function saveCookieForUser(userId, state) {
-  const slim = {};
+// `state` only holds the tab that is currently rendered, so a save merges
+// onto what is already stored instead of replacing it — otherwise saving
+// from the Pokémon tab would wipe Mega/G-Max progress. Keys that are live
+// in `state` but now hold nothing are dropped, so unchecking still sticks.
+function saveDataForUser(userId, state) {
+  const stored = loadDataForUser(userId);
   Object.entries(state).forEach(([key, s]) => {
     const entry = {};
     if (s.collected) entry.c = 1;
@@ -61,52 +91,73 @@ function saveCookieForUser(userId, state) {
     if (s.genderless) entry.g = 1;
     if (s.lucky) entry.l = 1;
     if (s.shiny) entry.s = 1;
-    if (Object.keys(entry).length) slim[key] = entry;
+    if (Object.keys(entry).length) stored[key] = entry;
+    else delete stored[key];
   });
-  setCookie(`pokedex_data_${userId}`, JSON.stringify(slim));
+  writeStore(`pokedex_data_${userId}`, JSON.stringify(stored));
 }
 
-function loadCookieForUser(userId) {
+function loadDataForUser(userId) {
   try {
-    return JSON.parse(getCookie(`pokedex_data_${userId}`) || "{}");
+    return JSON.parse(readStore(`pokedex_data_${userId}`) || "{}");
   } catch {
     return {};
   }
 }
 
 function deleteUser(userId) {
-  deleteCookie(`pokedex_data_${userId}`);
+  removeStore(`pokedex_data_${userId}`);
   const users = loadAllUsers().filter((u) => u !== userId);
   saveAllUsers(users);
-  if (loadUserId() === userId) deleteCookie("pokedex_user");
+  if (loadUserId() === userId) removeStore("pokedex_user");
 }
 
 function renameUser(oldId, newId) {
   if (oldId === newId) return;
-  const data = getCookie(`pokedex_data_${oldId}`);
-  if (data) setCookie(`pokedex_data_${newId}`, data);
-  deleteCookie(`pokedex_data_${oldId}`);
+  const data = readStore(`pokedex_data_${oldId}`);
+  if (data) writeStore(`pokedex_data_${newId}`, data);
+  removeStore(`pokedex_data_${oldId}`);
   const users = loadAllUsers().map((u) => (u === oldId ? newId : u));
   saveAllUsers(users);
-  if (loadUserId() === oldId) setCookie("pokedex_user", newId);
+  if (loadUserId() === oldId) writeStore("pokedex_user", newId);
 }
 
-// ── Legacy migration ──────────────────────────────────────────────
+// ── Migration ─────────────────────────────────────────────────────
+// Pulls anything left in cookies by an older build into localStorage.
+// Cookies are only cleared once their contents are safely stored.
+function migrateCookieStorage() {
+  ["pokedex_user", "pokedex_users"].forEach((name) => {
+    const legacy = getCookie(name);
+    if (legacy && !readStore(name) && writeStore(name, legacy)) {
+      deleteCookie(name);
+    }
+  });
+
+  loadAllUsers().forEach((uid) => {
+    const key = `pokedex_data_${uid}`;
+    const legacy = getCookie(key);
+    if (legacy && !readStore(key) && writeStore(key, legacy)) {
+      deleteCookie(key);
+    }
+  });
+}
+
 function migrateLegacyCookie(userId) {
   const legacy = getCookie("pokedex");
   if (legacy) {
-    setCookie(`pokedex_data_${userId}`, legacy);
-    deleteCookie("pokedex");
+    const key = `pokedex_data_${userId}`;
+    if (!readStore(key) && writeStore(key, legacy)) deleteCookie("pokedex");
   }
 }
 
+migrateCookieStorage();
+
 // ── Export / Import ───────────────────────────────────────────────
 function exportUserData(uid) {
-  const raw = getCookie(`pokedex_data_${uid}`);
   const payload = {
     version: 1,
     user: uid,
-    data: raw ? JSON.parse(raw) : {},
+    data: loadDataForUser(uid),
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], {
     type: "application/json",
@@ -141,5 +192,5 @@ function applyImport(uid, data) {
     users.push(uid);
     saveAllUsers(users);
   }
-  setCookie(`pokedex_data_${uid}`, JSON.stringify(data));
+  writeStore(`pokedex_data_${uid}`, JSON.stringify(data));
 }

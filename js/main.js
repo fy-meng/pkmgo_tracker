@@ -35,7 +35,7 @@ function switchTab(tab) {
   });
 
   // Re-init state from cookie and re-render
-  _cookieData = loadCookie();
+  _savedData = loadData();
   renderTable();
 }
 
@@ -68,7 +68,7 @@ async function init() {
   initTabs();
 
   // Load this user's saved collection and render the default tab
-  _cookieData = loadCookie();
+  _savedData = loadData();
   POKEMON = TAB_DATA.pokemon;
   activeTab = "pokemon";
   renderTable();

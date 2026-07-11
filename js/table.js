@@ -81,7 +81,7 @@ function renderFormRow(form, parentId) {
 
 // ── Main Pokémon row ──────────────────────────────────────────────
 function renderRow(p) {
-  const key = p.formId || p.id; // flat entries use formId as their state key
+  const key = stateKey(p);
   const s = state[key];
   const hasForms = !!(p.forms && p.forms.length);
   const tr = document.createElement("tr");
@@ -353,7 +353,7 @@ function renderRow(p) {
 // ── Form row toggle ───────────────────────────────────────────────
 function toggleFormRows(p) {
   const tbody = document.getElementById("pokemon-tbody");
-  const key = p.formId || p.id;
+  const key = stateKey(p);
   const parentTr = tbody.querySelector(`tr[data-id="${key}"]`);
 
   if (state[key].expanded) {
@@ -376,7 +376,7 @@ function updateStats() {
     total = 0;
 
   POKEMON.forEach((p) => {
-    const key = p.formId || p.id;
+    const key = stateKey(p);
     if (p.forms) {
       p.forms.forEach((f) => {
         total++;
@@ -401,7 +401,7 @@ function updateStats() {
     total > 0 ? `${(collected / total) * 100}%` : "0%";
 
   syncRegionBtns();
-  saveCookie();
+  saveData();
 }
 
 // ── Region separators ─────────────────────────────────────────────
@@ -523,7 +523,7 @@ function renderTable() {
       regionKeys[r] = [];
       regionOrder.push(r);
     }
-    regionKeys[r].push(p.formId || p.id);
+    regionKeys[r].push(stateKey(p));
   });
 
   let currentRegion = null;
